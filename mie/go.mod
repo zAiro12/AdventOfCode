@@ -1,3 +1,3 @@
-module github.com/zAiro12/AdventOfCode/tree/main/mie
+module github.com/zAiro12/AdventOfCode
 
 go 1.19
