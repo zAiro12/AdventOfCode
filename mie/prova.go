@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zAiro12/AdventOfCode/mie"
+	"github.com/zAiro12/AdventOfCode/tree/main/mie"
 )
 
 func main() {
