@@ -1,3 +1,3 @@
-module github.com/zAiro12/AdventOfCode
+module metodi.go
 
 go 1.19
