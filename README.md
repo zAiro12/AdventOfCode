@@ -10,7 +10,7 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 ### [2021](https://github.com/zAiro12/AdventOfCode/tree/main/2021)
 
 |         | Parte 1 | Parte 2 |
-|  :---:  |  :---:  |  :---:  |
+| :-----: | :-----: | :-----: |
 | [Giorno 1](https://adventofcode.com/2021/day/1)   | ⭐ | ⭐ |
 | [Giorno 2](https://adventofcode.com/2021/day/2)   | ⭐ | ⭐ |
 | [Giorno 3](https://adventofcode.com/2021/day/3)   | ⭐ | ⭐ |
@@ -29,12 +29,12 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 
 ### [2019](https://github.com/zAiro12/AdventOfCode/tree/main/2019)
 |         | Parte 1 | Parte 2 |
-|  :---:  |  :---:  |  :---:  |
+| :-----: | :-----: | :-----: |
 | [Giorno 6](https://adventofcode.com/2019/day/6)   | ⭐ | ⭐ |
 
 ### [2015](https://github.com/zAiro12/AdventOfCode/tree/main/2015)
 |         | Parte 1 | Parte 2 |
-|  :---:  |  :---:  |  :---:  |
+| :-----: | :-----: | :-----: |
 | [Giorno 1](https://adventofcode.com/2015/day/1)     | ⭐ | ⭐ |
 | [Giorno 2](https://adventofcode.com/2015/day/2)     | ⭐ | ⭐ |
 | [Giorno 20](https://adventofcode.com/2015/day/20)   | ⭐ | ⭐ |
