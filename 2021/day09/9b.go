@@ -17,7 +17,7 @@ func main() {
 	matrice := make(map[punto]risultato)
 	var in string
 	var appoggio punto
-	var lunghezza, x, c int
+	var lunghezza int
 	var finale []int
 	for i := 0; ; i++ {
 		_, err := fmt.Scan(&in)
@@ -36,7 +36,7 @@ func main() {
 
 	for i := 0; i < lunghezza; i++ {
 		for j := 0; j < lunghezza; j++ {
-			
+
 		}
 	}
 	sort.Ints(finale)
