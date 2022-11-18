@@ -37,4 +37,5 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 | :-----: | :-----: | :-----: |
 | [Giorno 1](https://adventofcode.com/2015/day/1)     | ⭐ | ⭐ |
 | [Giorno 2](https://adventofcode.com/2015/day/2)     | ⭐ | ⭐ |
+| [Giorno 3](https://adventofcode.com/2015/day/3)     | ⭐ | ⭐ |
 | [Giorno 20](https://adventofcode.com/2015/day/20)   | ⭐ | ⭐ |
