@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zAiro12/utile"
+	"github.com/zAiro12/AdventOfCode/tree/main/utile"
 )
 
 type node struct {
