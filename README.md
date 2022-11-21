@@ -26,6 +26,9 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 | [Giorno 13](https://adventofcode.com/2021/day/13) | ⭐ | ⭐ |
 | [Giorno 14](https://adventofcode.com/2021/day/14) | ⭐ | ⭐ |
 | [Giorno 15](https://adventofcode.com/2021/day/15) |  |  |
+| [Giorno 18](https://adventofcode.com/2021/day/18) |  |  |
+<!-- | [Giorno 16](https://adventofcode.com/2021/day/16) |  |  |
+| [Giorno 17](https://adventofcode.com/2021/day/17) |  |  | -->
 
 <br>
 
