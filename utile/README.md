@@ -2,18 +2,18 @@
 
 ## PILA
 
-- newNode : alloca uno nuovo spazio per un nuovo nodo
-- push : aggiunge un nuovo elemento in testa alla pila
-- pop : toglie l'elemento in testa alla pila
-- stampa : stampa la pila
+- NewNode : alloca uno nuovo spazio per un nuovo nodo
+- Push : aggiunge un nuovo elemento in testa alla pila
+- Pop : toglie l'elemento in testa alla pila
+- Stampa : stampa la pila
 
 ## ALBERI
 
-- newFoglia : alloca uno nuovo spazio per una nuovoa foglia
-- aggiungi : aggiunge una nuova foglia all'albero
+- NewFoglia : alloca uno nuovo spazio per una nuovoa foglia
+- Aggiungi : aggiunge una nuova foglia all'albero
 
 ## RESTO
 
-- rimuoviElemento : dato un indice, rimuove un elemento da una slice
-- max : dati due numeri, restituisce il massimo
-- min : dati due numeri, restituisce il minimo
+- RimuoviElemento : dato un indice, rimuove un elemento da una slice
+- Max : dati due numeri, restituisce il massimo
+- Min : dati due numeri, restituisce il minimo
