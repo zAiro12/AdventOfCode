@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zAiro12/dir"
+	"github.com/zAiro12/utile"
 )
 
 type node struct {
