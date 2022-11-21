@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/zAiro12/AdventOfCode/utile"
+	
+	zairo "github.com/zAiro12/AdventOfCode/utile"
 )
 
 type node struct {
@@ -18,7 +19,7 @@ type tNode struct {
 func main() {
 	albero := readTree("[[[1,2],3]")
 	fmt.Println(printTree(albero.testa))
-	fmt.Println(utile.max(2,3))
+	fmt.Println(zairo.max(1,2))
 }
 
 func readTree(s string) tNode {

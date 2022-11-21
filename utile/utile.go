@@ -1,15 +1,9 @@
 package utile
 
-type coordinate struct {
-	x, y int
-}
-
-func rimuoviElemento(s []int, i int) []int {
-	if len(s) <= i {
-		return s
-	}
-	s[i] = s[len(s)-1]
-	return s[:len(s)-1]
+func rimuoviElemento(s []int, index int) []int {
+	a := s[:index]
+	a = append(a, s[index+1:]...)
+	return a
 }
 
 func max(a, b int) int {
