@@ -18,6 +18,7 @@ type tNode struct {
 func main() {
 	albero := readTree("[[[1,2],3]")
 	fmt.Println(printTree(albero.testa))
+	fmt.Println(utile.max(2,3))
 }
 
 func readTree(s string) tNode {
