@@ -11,23 +11,23 @@ type testa struct {
 	primo *node
 }
 
-func newNode(val int) *node {
+func NewNode(val int) *node {
 	return &node{val, nil}
 }
 
-func push(val int, pila *testa) {
-	nodo := newNode(val)
+func Push(val int, pila *testa) {
+	nodo := NewNode(val)
 	nodo.next = pila.primo
 	pila.primo = nodo
 }
 
-func pop(pila *testa) *node {
+func Pop(pila *testa) *node {
 	nodo := pila.primo
 	pila.primo = pila.primo.next
 	return nodo
 }
 
-func (pila testa) stampa() {
+func (pila testa) Stampa() {
 	appoggio := pila.primo
 	for appoggio.next != nil {
 		fmt.Print(appoggio.val, " ")

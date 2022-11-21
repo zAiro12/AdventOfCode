@@ -10,12 +10,12 @@ type albero struct {
 	root *nodo
 }
 
-func newFoglia(val int) *nodo {
+func NewFoglia(val int) *nodo {
 	return &nodo{nil, nil, val}
 }
 
-func aggiungi(val int, albero *albero) {
-	foglia := newFoglia(val)
+func Aggiungi(val int, albero *albero) {
+	foglia := NewFoglia(val)
 	appoggio := albero.root
 	for appoggio.sinistra != nil {
 		appoggio = appoggio.sinistra
