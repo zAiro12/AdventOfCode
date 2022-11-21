@@ -15,7 +15,7 @@ func newNode(val int) *node {
 	return &node{val, nil}
 }
 
-func aggiungi(val int, pila *testa) {
+func push(val int, pila *testa) {
 	nodo := newNode(val)
 	nodo.next = pila.primo
 	pila.primo = nodo
