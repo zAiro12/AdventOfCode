@@ -1,5 +1,7 @@
 package main
 
+
+
 import (
 	"fmt"
 
@@ -9,7 +11,7 @@ import (
 func main() {
 	albero := ReadTree("[[[1,2],3]")
 	fmt.Println(PrintTree(albero.Root))
-	
+
 }
 
 func ReadTree(s string) zairo.Albero {

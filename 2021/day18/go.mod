@@ -1,5 +1,5 @@
-module day18
+module main
 
 go 1.19
 
-require github.com/zAiro12/AdventOfCode/utile v0.0.0-20221121205201-3c4261cf0443 // indirect
+require github.com/zAiro12/AdventOfCode/utile v0.0.0-20221122135048-71c0890334be
