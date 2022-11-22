@@ -11,7 +11,7 @@ import (
 func main() {
 	albero := ReadTree("[[[1,2],3]")
 	fmt.Println(PrintTree(albero.Root))
-
+	zairo.Max
 }
 
 func ReadTree(s string) zairo.Albero {
