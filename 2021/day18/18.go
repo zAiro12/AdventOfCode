@@ -7,15 +7,16 @@ import (
 )
 
 func main() {
-	albero := readTree("[[[1,2],3]")
-	fmt.Println(printTree(albero.root))
+	albero := ReadTree("[[[1,2],3]")
+	fmt.Println(PrintTree(albero.Root))
+	
 }
 
-func readTree(s string) zairo.Albero {
-	return zairo.Albero{}
+func ReadTree(s string) zairo.Albero {
+	return zairo.Albero{nil}
 }
 
-func printTree(nodo *zairo.NodoAlbero) string {
+func PrintTree(nodo *zairo.NodoAlbero) string {
 	var s string
 
 	return s
