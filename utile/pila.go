@@ -2,26 +2,26 @@ package utile
 
 import "fmt"
 
-type Node struct {
+type NodoPila struct {
 	val  int
-	next *Node
+	next *NodoPila
 }
 
 type Testa struct {
-	primo *Node
+	primo *NodoPila
 }
 
-func NewNode(val int) *Node {
-	return &Node{val, nil}
+func NewNodo(val int) *NodoPila {
+	return &NodoPila{val, nil}
 }
 
 func Push(val int, pila *Testa) {
-	nodo := NewNode(val)
+	nodo := NewNodo(val)
 	nodo.next = pila.primo
 	pila.primo = nodo
 }
 
-func Pop(pila *Testa) *Node {
+func Pop(pila *Testa) *NodoPila {
 	nodo := pila.primo
 	pila.primo = pila.primo.next
 	return nodo

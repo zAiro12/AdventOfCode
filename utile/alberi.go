@@ -1,17 +1,17 @@
 package utile
 
-type Nodo struct {
-	destra   *Nodo
-	sinistra *Nodo
+type NodoAlbero struct {
+	destra   *NodoAlbero
+	sinistra *NodoAlbero
 	val      int
 }
 
 type Albero struct {
-	root *Nodo
+	root *NodoAlbero
 }
 
-func NewFoglia(val int) *Nodo {
-	return &Nodo{nil, nil, val}
+func NewFoglia(val int) *NodoAlbero {
+	return &NodoAlbero{nil, nil, val}
 }
 
 func Aggiungi(val int, Albero *Albero) {

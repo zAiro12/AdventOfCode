@@ -19,7 +19,7 @@ type tNode struct {
 func main() {
 	albero := readTree("[[[1,2],3]")
 	fmt.Println(printTree(albero.testa))
-	var s zairo.nodo
+	var prova z
 }
 
 func readTree(s string) tNode {
