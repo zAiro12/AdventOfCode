@@ -1,5 +1,9 @@
 package utile
 
+type point struct {
+	x, y int
+}
+
 func RimuoviElemento(s []int, index int) []int {
 	a := s[:index]
 	a = append(a, s[index+1:]...)
