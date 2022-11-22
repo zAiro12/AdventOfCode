@@ -2,32 +2,32 @@ package utile
 
 import "fmt"
 
-type node struct {
+type Node struct {
 	val  int
-	next *node
+	next *Node
 }
 
-type testa struct {
-	primo *node
+type Testa struct {
+	primo *Node
 }
 
-func NewNode(val int) *node {
-	return &node{val, nil}
+func NewNode(val int) *Node {
+	return &Node{val, nil}
 }
 
-func Push(val int, pila *testa) {
+func Push(val int, pila *Testa) {
 	nodo := NewNode(val)
 	nodo.next = pila.primo
 	pila.primo = nodo
 }
 
-func Pop(pila *testa) *node {
+func Pop(pila *Testa) *Node {
 	nodo := pila.primo
 	pila.primo = pila.primo.next
 	return nodo
 }
 
-func (pila testa) Stampa() {
+func (pila Testa) Stampa() {
 	appoggio := pila.primo
 	for appoggio.next != nil {
 		fmt.Print(appoggio.val, " ")

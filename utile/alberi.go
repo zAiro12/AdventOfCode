@@ -1,22 +1,22 @@
 package utile
 
-type nodo struct {
-	destra   *nodo
-	sinistra *nodo
+type Nodo struct {
+	destra   *Nodo
+	sinistra *Nodo
 	val      int
 }
 
-type albero struct {
-	root *nodo
+type Albero struct {
+	root *Nodo
 }
 
-func NewFoglia(val int) *nodo {
-	return &nodo{nil, nil, val}
+func NewFoglia(val int) *Nodo {
+	return &Nodo{nil, nil, val}
 }
 
-func Aggiungi(val int, albero *albero) {
+func Aggiungi(val int, Albero *Albero) {
 	foglia := NewFoglia(val)
-	appoggio := albero.root
+	appoggio := Albero.root
 	for appoggio.sinistra != nil {
 		appoggio = appoggio.sinistra
 	}
