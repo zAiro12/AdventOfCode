@@ -3,12 +3,12 @@ package utile
 import "fmt"
 
 type NodoPila struct {
-	val  int
-	next *NodoPila
+	Val  int
+	Next *NodoPila
 }
 
 type Testa struct {
-	primo *NodoPila
+	Primo *NodoPila
 }
 
 func NewNodo(val int) *NodoPila {
@@ -17,21 +17,21 @@ func NewNodo(val int) *NodoPila {
 
 func Push(val int, pila *Testa) {
 	nodo := NewNodo(val)
-	nodo.next = pila.primo
-	pila.primo = nodo
+	nodo.Next = pila.Primo
+	pila.Primo = nodo
 }
 
 func Pop(pila *Testa) *NodoPila {
-	nodo := pila.primo
-	pila.primo = pila.primo.next
+	nodo := pila.Primo
+	pila.Primo = pila.Primo.Next
 	return nodo
 }
 
 func (pila Testa) Stampa() {
-	appoggio := pila.primo
-	for appoggio.next != nil {
-		fmt.Print(appoggio.val, " ")
-		appoggio = appoggio.next
+	appoggio := pila.Primo
+	for appoggio.Next != nil {
+		fmt.Print(appoggio.Val, " ")
+		appoggio = appoggio.Next
 	}
 	fmt.Println()
 }

@@ -6,27 +6,16 @@ import (
 	zairo "github.com/zAiro12/AdventOfCode/utile"
 )
 
-type node struct {
-	left  *node
-	right *node
-	val   int
-}
-
-type tNode struct {
-	testa *node
-}
-
 func main() {
 	albero := readTree("[[[1,2],3]")
-	fmt.Println(printTree(albero.testa))
-	var prova z
+	fmt.Println(printTree(albero.root))
 }
 
-func readTree(s string) tNode {
-	return tNode{}
+func readTree(s string) zairo.Albero {
+	return zairo.Albero{}
 }
 
-func printTree(nodo *node) string {
+func printTree(nodo *zairo.NodoAlbero) string {
 	var s string
 
 	return s

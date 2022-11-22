@@ -1,13 +1,13 @@
 package utile
 
 type NodoAlbero struct {
-	destra   *NodoAlbero
-	sinistra *NodoAlbero
-	val      int
+	Destra   *NodoAlbero
+	Sinistra *NodoAlbero
+	Val      int
 }
 
 type Albero struct {
-	root *NodoAlbero
+	Root *NodoAlbero
 }
 
 func NewFoglia(val int) *NodoAlbero {
@@ -16,12 +16,12 @@ func NewFoglia(val int) *NodoAlbero {
 
 func Aggiungi(val int, Albero *Albero) {
 	foglia := NewFoglia(val)
-	appoggio := Albero.root
-	for appoggio.sinistra != nil {
-		appoggio = appoggio.sinistra
+	appoggio := Albero.Root
+	for appoggio.Sinistra != nil {
+		appoggio = appoggio.Sinistra
 	}
-	for appoggio.destra != nil {
-		appoggio = appoggio.destra
+	for appoggio.Destra != nil {
+		appoggio = appoggio.Destra
 	}
 	appoggio = foglia
 }
