@@ -15,14 +15,8 @@ func NewNodoPila(val int) *NodoPila {
 	return &NodoPila{val, nil}
 }
 
-func AggiungiNodoPila(lista *Testa, val int){
-	nodo:= NewNodoPila(val)
-	nodo.Next = lista.Primo
-	lista.Primo = nodo
-}
-
 func PushPila(val int, pila *Testa) {
-	nodo := NewNodo(val)
+	nodo := NewNodoPila(val)
 	nodo.Next = pila.Primo
 	pila.Primo = nodo
 }
