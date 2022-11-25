@@ -28,7 +28,6 @@ func LeggiGrafo(grafo *Grafo) {
 		fmt.Scan(&y)
 		inputCoppie(grafo, x, y)
 	}
-	return grafo
 }
 
 func inputCoppie(grafo *Grafo, x, y int) {
