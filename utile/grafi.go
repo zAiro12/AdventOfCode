@@ -34,17 +34,14 @@ func LeggiGrafo() *Grafo {
 
 func inputCoppie(grafo *Grafo, x, y int) {
 	if grafo.Adiacenti[x] != nil {
-		aggiungiAdiacente(x, y)
+		aggiungiAdiacente(grafo.Adiacenti[x], y)
 	} else {
-		grafo.Adiacenti[x] = zairo.NewNodo(y)
+		grafo.Adiacenti[x] = zairo.NewNodoPila(y)
 	}
 }
 
-func aggiungiAdiacente(grafo *Grafo, x, y int) {
-	appoggio := grafo.Adiacenti[x].Next
-	for appoggio.Next != nil {
-		appoggio = appoggio.Next
-	}
-	nuovo := zairo.NewNodoPila()
-	appoggio.Next = nuovo
+func aggiungiAdiacente(nodo *zairo.NodoPila, y int) {
+	nuovo := zairo.NewNodoPila(y)
+	nuovo.Next = nodo.Next
+	nodo.Next = nuovo
 }
