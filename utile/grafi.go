@@ -38,6 +38,7 @@ func inputCoppie(grafo *Grafo, x, y int) {
 		grafo.Adiacenti[x] = nodo
 	}
 	fmt.Println("debug", x, y)
+	fmt.Println(grafo.Adiacenti)
 }
 
 func aggiungiAdiacente(nodo *nodopila, aggiungere *nodopila) {
