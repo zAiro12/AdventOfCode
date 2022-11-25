@@ -15,14 +15,13 @@ type Grafo struct {
 }
 
 func NuovoGrafo(n int) *Grafo {
-	return &Grafo{n, nil}
+	return &Grafo{n, make([]*nodopila, n)}
 }
 
 func LeggiGrafo() *Grafo {
 	var num int
 	fmt.Scan(&num)
 	grafo := NuovoGrafo(num)
-	grafo.Adiacenti = make([]*nodopila, num)
 	var x, y int
 	for {
 		_, err := fmt.Scan(&x)
