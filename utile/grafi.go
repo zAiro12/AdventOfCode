@@ -2,13 +2,15 @@ package utile
 
 import (
 	"fmt"
-
-	zairo "github.com/zAiro12/AdventOfCode/utile"
 )
 
+type Lista struct {
+	Val  int
+	Next *Lista
+}
 type Grafo struct {
 	N         int
-	Adiacenti []*zairo.Testa
+	Adiacenti []*Lista
 }
 
 func NuovoGrafo(n int) *Grafo {
@@ -19,7 +21,7 @@ func LeggiGrafo() *Grafo {
 	var num int
 	fmt.Scan(&num)
 	grafo := NuovoGrafo(num)
-	grafo.Adiacenti = make([]*zairo.Testa, num)
+	grafo.Adiacenti = make([]*Lista, num)
 	fmt.Println(len(grafo.Adiacenti))
 	return grafo
 }
