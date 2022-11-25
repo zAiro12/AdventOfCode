@@ -10,7 +10,7 @@ type nodopila struct {
 }
 
 type Grafo struct {
-	N         int
+	Len       int
 	Adiacenti []*nodopila
 }
 
@@ -51,11 +51,16 @@ func newNodo(val int) *nodopila {
 }
 
 func StampaGrafo(grafo *Grafo) {
-	for k, v := range grafo.Adiacenti {
-		fmt.Println("NODO", k)
-		for v.next != nil {
-			fmt.Print(v.val)
-			v = v.next
+	var appoggio *nodopila
+	for i := 0; i < grafo.Len; i++ {
+		fmt.Println("NODO", i)
+		if grafo.Adiacenti[i].next != nil {
+			appoggio = grafo.Adiacenti[i].next
+			fmt.Print(appoggio.val)
+			for appoggio.next != nil {
+				fmt.Println(appoggio.val)
+				appoggio = appoggio.next
+			}
 		}
 		fmt.Println()
 	}
