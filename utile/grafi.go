@@ -45,6 +45,6 @@ func aggiungiAdiacente(grafo *Grafo, x, y int) {
 	for appoggio.Next != nil {
 		appoggio = appoggio.Next
 	}
-	nuovo := zairo.NewNodo()
+	nuovo := zairo.NewNodoPila()
 	appoggio.Next = nuovo
 }
