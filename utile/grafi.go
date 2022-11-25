@@ -15,7 +15,7 @@ type Grafo struct {
 }
 
 func NuovoGrafo(n int) *Grafo {
-	return &Grafo{8, nil}
+	return &Grafo{n, nil}
 }
 
 func LeggiGrafo() *Grafo {
