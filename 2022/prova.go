@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
+	grafo:= zairo.NuovoGrafo(8)
 	zairo.LeggiGrafo()
-	zairo.
 }
