@@ -18,7 +18,7 @@ func NuovoGrafo(n int) *Grafo {
 	return &Grafo{n, make([]*nodopila, n)}
 }
 
-func LeggiGrafo(grafo *Grafo) {
+func(grafo *Grafo)AggiungiCoppieGrafo() {
 	var x, y int
 	for {
 		_, err := fmt.Scan(&x)
