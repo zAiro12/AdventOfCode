@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	grafo := zairo.NuovoGrafo(8)
-	zairo.LeggiGrafo(grafo)
+	g := zairo.NuovoGrafo(8)
 }
