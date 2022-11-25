@@ -7,5 +7,5 @@ import (
 func main() {
 	g := zairo.NuovoGrafo(8)
 	zairo.AggiungiCoppieGrafo(g)
-	zairo.Sta
+	zairo.StampaGrafo(g)
 }
