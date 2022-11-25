@@ -6,4 +6,5 @@ import (
 
 func main() {
 	g := zairo.NuovoGrafo(8)
+	zairo.A
 }
