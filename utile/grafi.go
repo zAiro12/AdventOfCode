@@ -54,7 +54,7 @@ func StampaGrafo(grafo *Grafo) {
 	for k, v := range grafo.Adiacenti {
 		fmt.Println("NODO", k)
 		for v.next != nil {
-			fmt.Print(&v.val)
+			fmt.Print(v.val)
 			v = v.next
 		}
 		fmt.Println()
