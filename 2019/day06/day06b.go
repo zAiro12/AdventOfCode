@@ -16,14 +16,17 @@ func main() {
 		trim := strings.Split(in, ")")
 		mappa[trim[1]] = trim[0]
 	}
+	//stampa(mappa)
 
-	stampa(mappa)
-
-	fmt.Println(trova(mappa, "SAN"))
+	fmt.Println(distanza(mappa))
 
 }
 
-func trova(m map[string]string, s string) int {
+func distanza(m map[string]string) int {
+	var i int
+	san := "SAN"
+	you := "YOU"
+	
 	return 0
 }
 
