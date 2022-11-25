@@ -11,17 +11,23 @@ type Testa struct {
 	Primo *NodoPila
 }
 
-func NewNodo(val int) *NodoPila {
+func NewNodoPila(val int) *NodoPila {
 	return &NodoPila{val, nil}
 }
 
-func Push(val int, pila *Testa) {
+func AggiungiNodoPila(lista *Testa, val int){
+	nodo:= NewNodoPila(val)
+	nodo.Next = lista.Primo
+	lista.Primo = nodo
+}
+
+func PushPila(val int, pila *Testa) {
 	nodo := NewNodo(val)
 	nodo.Next = pila.Primo
 	pila.Primo = nodo
 }
 
-func Pop(pila *Testa) *NodoPila {
+func PopPila(pila *Testa) *NodoPila {
 	nodo := pila.Primo
 	pila.Primo = pila.Primo.Next
 	return nodo
