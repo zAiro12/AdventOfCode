@@ -49,13 +49,11 @@ func newNodo(val int) *nodopila {
 }
 
 func StampaGrafo(grafo *Grafo) {
-	var appoggio *nodopila
 	for k, v := range grafo.Adiacenti {
 		fmt.Println("NODO", k)
-		appoggio = v
-		for appoggio.next != nil {
-			fmt.Print(appoggio.val)
-			appoggio = appoggio.next
+		for v.next != nil {
+			fmt.Print(v.val)
+			v = v.next
 		}
 		fmt.Println()
 	}
