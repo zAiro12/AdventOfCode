@@ -2,13 +2,16 @@ package utile
 
 import (
 	"fmt"
-
-	zairo "github.com/zAiro12/AdventOfCode/utile"
 )
+
+type nodopila struct {
+	val  int
+	next *nodopila
+}
 
 type Grafo struct {
 	N         int
-	Adiacenti []*zairo.NodoPila
+	Adiacenti []*nodopila
 }
 
 func NuovoGrafo(n int) *Grafo {
@@ -19,7 +22,7 @@ func LeggiGrafo() *Grafo {
 	var num int
 	fmt.Scan(&num)
 	grafo := NuovoGrafo(num)
-	grafo.Adiacenti = make([]*zairo.NodoPila, num)
+	grafo.Adiacenti = make([]*nodopila, num)
 	var x, y int
 	for {
 		_, err := fmt.Scan(&x)
@@ -33,7 +36,7 @@ func LeggiGrafo() *Grafo {
 }
 
 func inputCoppie(grafo *Grafo, x, y int) {
-	nodo := zairo.NewNodoPila(y)
+	nodo := newNodo(y)
 	if grafo.Adiacenti[x] != nil {
 		aggiungiAdiacente(grafo.Adiacenti[x], nodo)
 	} else {
@@ -41,7 +44,11 @@ func inputCoppie(grafo *Grafo, x, y int) {
 	}
 }
 
-func aggiungiAdiacente(nodo *zairo.NodoPila, aggiungere *zairo.NodoPila) {
-	aggiungere.Next = nodo.Next
-	nodo.Next = aggiungere
+func aggiungiAdiacente(nodo *nodopila, aggiungere *nodopila) {
+	aggiungere.next = nodo.next
+	nodo.next = aggiungere
+}
+
+func newNodo(val int) *nodopila {
+	return &nodopila{val, nil}
 }
