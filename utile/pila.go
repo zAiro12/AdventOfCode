@@ -27,7 +27,7 @@ func PopPila(pila *Testa) *NodoPila {
 	return nodo
 }
 
-func (pila Testa) Stampa() {
+func (pila Testa) StampaPila() {
 	appoggio := pila.Primo
 	for appoggio.Next != nil {
 		fmt.Print(appoggio.Val, " ")
