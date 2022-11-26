@@ -65,3 +65,17 @@ func StampaGrafo(grafo *Grafo) {
 		fmt.Println()
 	}
 }
+
+func TrovaCoppiaGrafo(grafo *Grafo, x, y int) bool {
+	if x > grafo.Len || x < 0 {
+		return false
+	}
+	appoggio := grafo.Adiacenti[x]
+	for appoggio != nil {
+		if appoggio.Val == y {
+			return true
+		}
+		appoggio = appoggio.Next
+	}
+	return false
+}
