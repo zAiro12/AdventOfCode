@@ -1,11 +1,11 @@
 package main
 
-import (
-	zairo "github.com/zAiro12/AdventOfCode/utile"
-)
+import ("github.com/")
 
 func main() {
-	g := zairo.NuovoGrafo(8)
-	zairo.AggiungiCoppieGrafo(g)
-	zairo.StampaGrafo(g)
+	g := NuovoGrafo(8)
+	AggiungiCoppieGrafo(g)
+	StampaGrafo(g)
 }
+
+

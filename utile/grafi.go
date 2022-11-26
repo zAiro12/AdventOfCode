@@ -54,12 +54,12 @@ func StampaGrafo(grafo *Grafo) {
 	var appoggio *nodopila
 	for i := 0; i < grafo.Len; i++ {
 		fmt.Println("NODO", i)
-		if grafo.Adiacenti[i].next != nil {
-			appoggio = grafo.Adiacenti[i].next
-			fmt.Print(appoggio.val)
+		if grafo.Adiacenti[i] != nil {
+			appoggio = grafo.Adiacenti[i]
+			fmt.Print(appoggio.val, " ")
 			for appoggio.next != nil {
-				fmt.Println(appoggio.val)
 				appoggio = appoggio.next
+				fmt.Print(appoggio.val, " ")
 			}
 		}
 		fmt.Println()
