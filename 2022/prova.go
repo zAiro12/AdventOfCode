@@ -28,7 +28,7 @@ func Trova(grafo *zairo.Grafo, x, y int) bool {
 		if appoggio.Val == y {
 			return true
 		}
-		appoggio = appoggio.next
+		appoggio = appoggio.Next
 	}
 	return false
 }
