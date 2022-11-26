@@ -4,21 +4,23 @@ import (
 	"fmt"
 )
 
-type Nodopila struct {
+type NodopilaInt struct {
 	Val  int
-	Next *Nodopila
+	Next *NodopilaInt
 }
 
-type Grafo struct {
+type GrafoInt struct {
 	Len       int
-	Adiacenti []*Nodopila
+	Adiacenti []*NodopilaInt
 }
 
-func NuovoGrafo(n int) *Grafo {
-	return &Grafo{n, make([]*Nodopila, n)}
+type GrafoString map[string][]string
+
+func NuovoGrafoInt(n int) *GrafoInt {
+	return &GrafoInt{n, make([]*NodopilaInt, n)}
 }
 
-func AggiungiCoppieGrafo(grafo *Grafo) {
+func AggiungiCoppieGrafoInt(grafo *GrafoInt) {
 	var x, y int
 	for {
 		_, err := fmt.Scan(&x)
@@ -26,14 +28,14 @@ func AggiungiCoppieGrafo(grafo *Grafo) {
 			break
 		}
 		fmt.Scan(&y)
-		inputCoppie(grafo, x, y)
+		inputCoppieInt(grafo, x, y)
 	}
 }
 
-func inputCoppie(grafo *Grafo, x, y int) {
-	nodo := newNodo(y)
+func inputCoppieInt(grafo *GrafoInt, x, y int) {
+	nodo := newNodoInt(y)
 	if grafo.Adiacenti[x] != nil {
-		aggiungiAdiacente(grafo.Adiacenti[x], nodo)
+		aggiungiAdiacenteInt(grafo.Adiacenti[x], nodo)
 	} else {
 		grafo.Adiacenti[x] = nodo
 	}
@@ -41,17 +43,17 @@ func inputCoppie(grafo *Grafo, x, y int) {
 	// fmt.Println("DEBUG:", grafo.Adiacenti)
 }
 
-func aggiungiAdiacente(nodo *Nodopila, aggiungere *Nodopila) {
+func aggiungiAdiacenteInt(nodo *NodopilaInt, aggiungere *NodopilaInt) {
 	aggiungere.Next = nodo.Next
 	nodo.Next = aggiungere
 }
 
-func newNodo(val int) *Nodopila {
-	return &Nodopila{val, nil}
+func newNodoInt(val int) *NodopilaInt {
+	return &NodopilaInt{val, nil}
 }
 
-func StampaGrafo(grafo *Grafo) {
-	var appoggio *Nodopila
+func StampaGrafoInt(grafo *GrafoInt) {
+	var appoggio *NodopilaInt
 	for i := 0; i < grafo.Len; i++ {
 		fmt.Println("VERTICE", i)
 		if grafo.Adiacenti[i] != nil {
@@ -66,7 +68,7 @@ func StampaGrafo(grafo *Grafo) {
 	}
 }
 
-func IsArcoGrafo(grafo *Grafo, x, y int) bool {
+func IsArcoGrafoInt(grafo *GrafoInt, x, y int) bool {
 	if x > grafo.Len || x < 0 {
 		return false
 	}
@@ -78,4 +80,16 @@ func IsArcoGrafo(grafo *Grafo, x, y int) bool {
 		appoggio = appoggio.Next
 	}
 	return false
+}
+
+func InputString(grafo GrafoString) {
+	var k, v string
+	for {
+		_, err := fmt.Scan(&k)
+		if err != nil {
+			break
+		}
+		fmt.Scan(&v)
+		grafo[k] = append(grafo[k], v)
+	}
 }

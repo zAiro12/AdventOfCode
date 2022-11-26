@@ -31,24 +31,24 @@
 - **STRUCT**
 
     ```GOLANG
-        type Nodopila struct {
+        type NodopilaInt struct {
             Val  int
             Next *Nodopila
         }
 
-        type Grafo struct {
+        type GrafoInt struct {
             Len       int
             Adiacenti []*Nodopila
         }
     ```
 
-- NuovoGrafo : alloca lo spazio per un nuovo grafo
+- NuovoGrafoInt : alloca lo spazio per un nuovo grafo
 
-- AggiungiCoppieGrafo : dato un vertice (x), crea un arco con un altro vertice (y)
+- AggiungiCoppieGrafoInt : dato un vertice (x), crea un arco con un altro vertice (y)
 
-- StampaGrafo : stampa il grafo vertice per vertice
+- StampaGrafoInt : stampa il grafo vertice per vertice
 
-- IsArcoGrafo : dice se esiste un arco tra due nodi
+- IsArcoGrafoInt : dice se esiste un arco tra due nodi
 
 ## RESTO
 
