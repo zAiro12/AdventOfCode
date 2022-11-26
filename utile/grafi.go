@@ -5,8 +5,8 @@ import (
 )
 
 type nodopila struct {
-	val  int
-	next *nodopila
+	Val  int
+	Next *nodopila
 }
 
 type Grafo struct {
