@@ -37,8 +37,8 @@ func inputCoppie(grafo *Grafo, x, y int) {
 	} else {
 		grafo.Adiacenti[x] = nodo
 	}
-	fmt.Println("debug", x, y)
-	fmt.Println("DEBUG:", grafo.Adiacenti)
+	// fmt.Println("debug", x, y)
+	// fmt.Println("DEBUG:", grafo.Adiacenti)
 }
 
 func aggiungiAdiacente(nodo *Nodopila, aggiungere *Nodopila) {
@@ -53,7 +53,7 @@ func newNodo(val int) *Nodopila {
 func StampaGrafo(grafo *Grafo) {
 	var appoggio *Nodopila
 	for i := 0; i < grafo.Len; i++ {
-		fmt.Println("NODO", i)
+		fmt.Println("VERTICE", i)
 		if grafo.Adiacenti[i] != nil {
 			appoggio = grafo.Adiacenti[i]
 			fmt.Print(appoggio.Val, " ")
@@ -66,7 +66,7 @@ func StampaGrafo(grafo *Grafo) {
 	}
 }
 
-func TrovaCoppiaGrafo(grafo *Grafo, x, y int) bool {
+func IsArcoGrafo(grafo *Grafo, x, y int) bool {
 	if x > grafo.Len || x < 0 {
 		return false
 	}

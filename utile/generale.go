@@ -1,7 +1,7 @@
 package utile
 
-type point struct {
-	x, y int
+type Point struct {
+	X, Y int
 }
 
 func RimuoviElemento(s []int, index int) []int {
