@@ -4,18 +4,18 @@ import (
 	"fmt"
 )
 
-type nodopila struct {
+type Nodopila struct {
 	Val  int
-	Next *nodopila
+	Next *Nodopila
 }
 
 type Grafo struct {
 	Len       int
-	Adiacenti []*nodopila
+	Adiacenti []*Nodopila
 }
 
 func NuovoGrafo(n int) *Grafo {
-	return &Grafo{n, make([]*nodopila, n)}
+	return &Grafo{n, make([]*Nodopila, n)}
 }
 
 func AggiungiCoppieGrafo(grafo *Grafo) {
@@ -41,9 +41,9 @@ func inputCoppie(grafo *Grafo, x, y int) {
 	fmt.Println("DEBUG:", grafo.Adiacenti)
 }
 
-func aggiungiAdiacente(nodo *nodopila, aggiungere *nodopila) {
-	aggiungere.next = nodo.next
-	nodo.next = aggiungere
+func aggiungiAdiacente(nodo *Nodopila, aggiungere *Nodopila) {
+	aggiungere.Next = nodo.Next
+	nodo.Next = aggiungere
 }
 
 func newNodo(val int) *nodopila {
