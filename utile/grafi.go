@@ -46,20 +46,20 @@ func aggiungiAdiacente(nodo *Nodopila, aggiungere *Nodopila) {
 	nodo.Next = aggiungere
 }
 
-func newNodo(val int) *nodopila {
-	return &nodopila{val, nil}
+func newNodo(val int) *Nodopila {
+	return &Nodopila{val, nil}
 }
 
 func StampaGrafo(grafo *Grafo) {
-	var appoggio *nodopila
+	var appoggio *Nodopila
 	for i := 0; i < grafo.Len; i++ {
 		fmt.Println("NODO", i)
 		if grafo.Adiacenti[i] != nil {
 			appoggio = grafo.Adiacenti[i]
-			fmt.Print(appoggio.val, " ")
-			for appoggio.next != nil {
-				appoggio = appoggio.next
-				fmt.Print(appoggio.val, " ")
+			fmt.Print(appoggio.Val, " ")
+			for appoggio.Next != nil {
+				appoggio = appoggio.Next
+				fmt.Print(appoggio.Val, " ")
 			}
 		}
 		fmt.Println()
