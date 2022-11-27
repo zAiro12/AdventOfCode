@@ -1,44 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
 
-type node struct {
-	val  string
-	next *node
-}
-type Lista struct {
-	testa *node
-}
+	zairo "github.com/zAiro12/AdventOfCode/utile"
+)
 
 func main() {
-	var in string
-	var albero Lista
-	for {
-		_, err := fmt.Scan(&in)
-		if err != nil {
-			break
-		}
-		aggiungi(albero, in)
+	grafo := zairo.NewGrafoString()
+	grafo.InputString()
+	parteA(grafo)
+}
+
+func parteA(grafo zairo.GrafoString) int {
+	controllo := make(map[string]bool)
+	var percorsi []string
+	perocrso(grafo, "start", percorsi, controllo)
+	return len(percorsi)
+}
+
+func perocrso(grafo zairo.GrafoString, nodo string, percorsi []string, controllo map[string]bool) {
+	if nodo == "end" || controllo[nodo] {
+		return
 	}
-	stampa(albero)
-}
 
-func newNodo(val string) *node {
-	return &node{val, nil}
-}
-
-func aggiungi(l Lista, val string) Lista {
-	nodo := newNodo(val)
-	nodo.next = l.testa
-	l.testa = nodo
-	return l
-}
-
-func stampa(albero Lista) {
-	var next *node
-	for next != nil {
-		fmt.Print(next.val, " ")
-		next = next.next
+	lower := strings.ToLower(nodo)
+	if lower == nodo {
+		controllo[nodo] = true
 	}
-	fmt.Println()
+
+	fmt.Print(nodo, " ")
+	for i := 0; i < len(grafo[nodo]); i++ {
+		perocrso(grafo, grafo[nodo][i], percorsi, controllo)
+	}
 }

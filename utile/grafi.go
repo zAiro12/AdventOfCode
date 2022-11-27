@@ -2,6 +2,7 @@ package utile
 
 import (
 	"fmt"
+	"strings"
 )
 
 type NodopilaInt struct {
@@ -82,14 +83,33 @@ func IsArcoGrafoInt(grafo *GrafoInt, x, y int) bool {
 	return false
 }
 
-func InputString(grafo GrafoString) {
-	var k, v string
+func NewGrafoString() GrafoString {
+	return make(GrafoString, 0)
+}
+
+func (grafo GrafoString) InputString() {
+	var in string
 	for {
-		_, err := fmt.Scan(&k)
+		_, err := fmt.Scan(&in)
 		if err != nil {
 			break
 		}
-		fmt.Scan(&v)
-		grafo[k] = append(grafo[k], v)
+		split := strings.Split(in, "-")
+		grafo[split[0]] = append(grafo[split[0]], split[1])
+		grafo[split[1]] = append(grafo[split[1]], split[0])
 	}
+}
+
+func (grafo GrafoString) StampaGrafoString() {
+	for k, v := range grafo {
+		fmt.Println("VERTICE:", k)
+		for i := 0; i < len(v); i++ {
+			fmt.Print(v[i], " ")
+		}
+		fmt.Println()
+	}
+}
+
+func (grafo GrafoString) Archi(v string) []string {
+	return grafo[v]
 }

@@ -27,11 +27,12 @@
 - Aggiungi : aggiunge una nuova foglia all'albero
 
 ## GRAFI
+> ### **INT**
 
 - **STRUCT**
 
     ```GOLANG
-        type NodopilaInt struct {
+       type NodopilaInt struct {
             Val  int
             Next *Nodopila
         }
@@ -49,6 +50,20 @@
 - StampaGrafoInt : stampa il grafo vertice per vertice
 
 - IsArcoGrafoInt : dice se esiste un arco tra due nodi
+
+> ### STRING
+
+- **STRUCT**
+
+    ```GOLANG
+        type GrafoString map[string][]string
+    ```
+
+- NewGrafoString() : alloca un nuovo spazio per la mappa del grafo
+
+- *InputString()* : **METODO** per leggere in input gl'archi del grafo
+
+- *StampaGrafoString()* : **METODO** per stampare il grafo
 
 ## RESTO
 
