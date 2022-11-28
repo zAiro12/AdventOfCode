@@ -1,10 +1,17 @@
 package utile
 
+import "strings"
+
 type Point struct {
 	X, Y int
 }
 
-func RimuoviElemento(s []int, index int) []int {
+func RimuoviElementoInt(s []int, index int) []int {
+	a := s[:index]
+	a = append(a, s[index+1:]...)
+	return a
+}
+func RimuoviElementoString(s []string, index int) []string {
 	a := s[:index]
 	a = append(a, s[index+1:]...)
 	return a
@@ -23,4 +30,9 @@ func Min(a, b int) int {
 	} else {
 		return b
 	}
+}
+
+func IsLower(s string) bool {
+	low := strings.ToLower(s)
+	return low == s
 }
