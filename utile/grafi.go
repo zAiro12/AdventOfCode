@@ -17,10 +17,12 @@ type GrafoInt struct {
 
 type GrafoString map[string][]string
 
+//alloca memoria per un nuovo grafo vuoto
 func NuovoGrafoInt(n int) *GrafoInt {
 	return &GrafoInt{n, make([]*NodopilaInt, n)}
 }
 
+//aggiunge ad un grafo vuoto nuove coppie da standart input
 func AggiungiCoppieGrafoInt(grafo *GrafoInt) {
 	var x, y int
 	for {
@@ -33,6 +35,7 @@ func AggiungiCoppieGrafoInt(grafo *GrafoInt) {
 	}
 }
 
+//aggiunge ad un grafo una coppia
 func inputCoppieInt(grafo *GrafoInt, x, y int) {
 	nodo := newNodoInt(y)
 	if grafo.Adiacenti[x] != nil {
@@ -44,15 +47,18 @@ func inputCoppieInt(grafo *GrafoInt, x, y int) {
 	// fmt.Println("DEBUG:", grafo.Adiacenti)
 }
 
+//crea un arco con un nodo già esistente
 func aggiungiAdiacenteInt(nodo *NodopilaInt, aggiungere *NodopilaInt) {
 	aggiungere.Next = nodo.Next
 	nodo.Next = aggiungere
 }
 
+//alloca spazio per un vuono nodo
 func newNodoInt(val int) *NodopilaInt {
 	return &NodopilaInt{val, nil}
 }
 
+//stampa il grafo nodo per nodo
 func StampaGrafoInt(grafo *GrafoInt) {
 	var appoggio *NodopilaInt
 	for i := 0; i < grafo.Len; i++ {
@@ -69,6 +75,7 @@ func StampaGrafoInt(grafo *GrafoInt) {
 	}
 }
 
+//restituisce se due nodi sono collegati da un arco o no
 func IsArcoGrafoInt(grafo *GrafoInt, x, y int) bool {
 	if x > grafo.Len || x < 0 {
 		return false
@@ -83,10 +90,12 @@ func IsArcoGrafoInt(grafo *GrafoInt, x, y int) bool {
 	return false
 }
 
+//alloca spazio per un nuovo grafo vuoto
 func NewGrafoString() GrafoString {
 	return make(GrafoString, 0)
 }
 
+//metodo per inserire da standard input nuovi nodi al grafo
 func (grafo GrafoString) InputString() {
 	var in string
 	for {
@@ -100,6 +109,7 @@ func (grafo GrafoString) InputString() {
 	}
 }
 
+//metodo per stapare il grafo
 func (grafo GrafoString) StampaGrafoString() {
 	for k, v := range grafo {
 		fmt.Println("VERTICE:", k)
@@ -110,6 +120,7 @@ func (grafo GrafoString) StampaGrafoString() {
 	}
 }
 
+//metodo per stapare gli archi collegati ad un nodo
 func (grafo GrafoString) Archi(v string) []string {
 	return grafo[v]
 }

@@ -16,9 +16,4 @@ func main() {
 	c := a + b
 	fmt.Println(c)
 	_ = zairo.Max(a, b, c)
-
-	var s []string
-	// var i []int
-	_ = zairo.RimuoviElemento(s, 5)
-	// _ = zairo.RimuoviElemento()
 }
