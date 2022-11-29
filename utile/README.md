@@ -23,8 +23,13 @@
     }
     ```
 
-- NewFoglia : alloca uno nuovo spazio per una nuovoa foglia
-- Aggiungi : aggiunge una nuova foglia all'albero
+- NewFoglia : alloca uno nuovo spazio per una nuova foglia dell'abero
+- GenAlbero : dato un array genera un albero completo o semicompleto
+- StanmpaPreorder : stampa un albero in preorder
+- StanmpaInorder : stampa un albero in inorder
+- StanmpaPostorder : stampa un albero in postorder
+- StampaAlberoASommario : stampa un albero a sommario
+- StampaAlbero : stampa un albero
 
 ## GRAFI
 > ### **INT**
