@@ -83,3 +83,5 @@
 - RimuoviElemento : dato un indice, rimuove un elemento da una slice
 - Max : dati due numeri, restituisce il massimo
 - Min : dati due numeri, restituisce il minimo
+- IsLower : data una stringa retituisce se è lowercase
+- IsUpper : data una stringa retituisce se è uppercase
