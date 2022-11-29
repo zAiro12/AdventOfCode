@@ -1,16 +1,15 @@
 package utile
 
 import (
-	"sort"
 	"strings"
 )
 
-//struct con coordinate x, y
+// struct con coordinate x, y
 type Point struct {
 	X, Y int
 }
 
-type Interfaccia interface{
+type Interfaccia interface {
 	//sort.Interface
 }
 
@@ -29,7 +28,7 @@ func RimuoviElementoString(arr []string, index int) []string {
 }
 
 // data una slice di qualsiasi tipo elimina l'elemento in posizione x
-func RimuoviElemento(arr []any, index int)[]any{
+func RimuoviElemento(arr []any, index int) []any {
 	a := arr[:index]
 	a = append(a, arr[index+1:]...)
 	return a
