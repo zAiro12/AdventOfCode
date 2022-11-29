@@ -3,8 +3,7 @@ SHELL=/bin/bash
 giorno=$(date +'%d')
 anno=$(date +'%Y')
 echo "$giorno $anno"
-cd /
-cd /Users/zairo/Library/Mobile\ Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/$anno
+cd $anno
 mkdir day$giorno
 cd day$giorno
 
