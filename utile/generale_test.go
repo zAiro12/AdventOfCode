@@ -26,7 +26,7 @@ func TestMin(t *testing.T) {
 func TestRimuoviElemento(t *testing.T) {
 
 	aspettato := []int{1, 2, 3, 5}
-	risultato := RimuoviElemento([]int{1, 2, 3, 4, 5}, 3)
+	risultato := RimuoviElementoInt([]int{1, 2, 3, 4, 5}, 3)
 	for i := 0; i < len(risultato); i++ {
 		if aspettato[i] != risultato[i] {
 			t.Errorf("RimuoviElemento(%d, 3) FAIL. Risultato: %d, ricevuto %d", risultato, risultato[i], aspettato[i])
