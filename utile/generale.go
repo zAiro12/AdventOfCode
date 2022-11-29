@@ -33,7 +33,7 @@ func RimuoviElemento(arr []any, index int) []any {
 // dati x numeri restituise il maggiore
 func Max(a ...int) int {
 	max := a[0]
-	for i := 0; i < len(a); i++ {
+	for i := 1; i < len(a); i++ {
 		if a[i] > max {
 			max = a[i]
 		}
@@ -44,7 +44,7 @@ func Max(a ...int) int {
 // dati x numeri restituise il minore
 func Min(a ...int) int {
 	min := a[0]
-	for i := 0; i < len(a); i++ {
+	for i := 1; i < len(a); i++ {
 		if a[i] > min {
 			min = a[i]
 		}
