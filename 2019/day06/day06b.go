@@ -7,27 +7,35 @@ import (
 
 func main() {
 	var in string
-	mappa := make(map[string]string)
+	padri := make(map[string]string)
 	for {
 		_, err := fmt.Scan(&in)
 		if err != nil {
 			break
 		}
 		trim := strings.Split(in, ")")
-		mappa[trim[1]] = trim[0]
+		padri[trim[1]] = trim[0]
 	}
-	//stampa(mappa)
+	stampa(padri)
 
-	fmt.Println(distanza(mappa))
+	//fmt.Println(distanza(padri))
 
 }
 
-func distanza(m map[string]string) int {
-	var i int
+func distanza(padri map[string]string) int {
+	var passi int
+	visitati := make(map[string]int)
 	san := "SAN"
 	you := "YOU"
-	
-	return 0
+	for i := 0; san == "COM" || you == "COM"; i++ {
+		san = padri[san]
+		you = padri[you]
+
+		visitati[san] = i
+		if 
+	}
+
+	return passi
 }
 
 func stampa(mappa map[string]string) {

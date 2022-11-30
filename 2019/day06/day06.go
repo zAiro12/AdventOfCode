@@ -17,7 +17,7 @@ func main() {
 		mappa[trim[1]] = trim[0]
 	}
 
-	stampa(mappa)
+	Stampa(mappa)
 
 	var c int
 	for k := range mappa {
@@ -35,7 +35,7 @@ func conta(s string, m map[string]string) int {
 	}
 }
 
-func stampa(mappa map[string]string) {
+func Stampa(mappa map[string]string) {
 	for k, v := range mappa {
 		fmt.Println(k, ")", v)
 	}
