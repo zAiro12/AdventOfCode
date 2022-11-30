@@ -8,7 +8,7 @@ import (
 func main() {
 	var in string
 	padri := make(map[string]string)
-	
+
 	for {
 		_, err := fmt.Scan(&in)
 		if err != nil {
@@ -18,12 +18,12 @@ func main() {
 		padri[trim[1]] = trim[0]
 	}
 
-	fmt.Println(risolviA(padri))
-	fmt.Println(risolviB(padri))
+	fmt.Println("A:", risolviA(padri))
+	fmt.Println("B:", risolviB(padri))
 
 }
 
-//risolvi parte a usando funzione conta
+// risolvi parte a usando funzione conta
 func risolviA(padri map[string]string) int {
 	var c int
 	for k := range padri {
@@ -32,10 +32,10 @@ func risolviA(padri map[string]string) int {
 	return c
 }
 
-//parte a
-func conta(s string, m map[string]string) int {
-	if len(m[s]) != 0 {
-		return 1 + conta(m[s], m)
+// parte a
+func conta(s string, padri map[string]string) int {
+	if len(padri[s]) != 0 {
+		return 1 + conta(padri[s], padri)
 	} else {
 		return 0
 	}
@@ -48,20 +48,27 @@ func risolviB(padri map[string]string) int {
 	san := "SAN"
 	you := "YOU"
 
-	for i := 0; san != "COM" || you != "COM"; i++ {
+	for i := 0; ; i++ {
+		if san == "COM" || you == "COM" {
+			break
+		}
 		san = padri[san]
 		you = padri[you]
-		fmt.Println("debug:", san, you)
 
 		visitatiSan[san] = i
 		visitatiYou[you] = i
 
+		if visitatiSan[you] > 0 {
+			passi = visitatiSan[you] + visitatiYou[you]
+			break
+		}
+		if visitatiYou[san] > 0 {
+			passi = visitatiYou[san] + visitatiSan[san]
+			break
+		}
 	}
-	fmt.Println(visitatiSan)
-	fmt.Println(visitatiYou)
 	return passi
 }
-
 
 func stampa(mappa map[string]string) {
 	for k, v := range mappa {
