@@ -15,7 +15,7 @@ func main() {
 
 	c := a + b
 	fmt.Println(c)
-	_ = zairo.Max(a, b, c)
+	zairo.StampaA(zairo.Max(a, b, c), a, b)
 
 	s := []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
 	i := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -25,5 +25,5 @@ func main() {
 	// fmt.Println(zairo.RimuoviElemento(i, 4))
 	fmt.Println(s, i)
 	fmt.Printf("%T \n", j[9])
-	
+
 }
