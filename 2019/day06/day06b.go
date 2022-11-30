@@ -24,15 +24,18 @@ func main() {
 
 func distanza(padri map[string]string) int {
 	var passi int
-	visitati := make(map[string]int)
+	visitatiSan := make(map[string]int)
+	visitatiYou := make(map[string]int)
 	san := "SAN"
 	you := "YOU"
+
 	for i := 0; san == "COM" || you == "COM"; i++ {
 		san = padri[san]
 		you = padri[you]
 
-		visitati[san] = i
-		if 
+		visitatiSan[san] = i
+		visitatiYou[you] = i
+		
 	}
 
 	return passi
