@@ -74,6 +74,7 @@
 
 - IsLower : data una stringa retituisce se è lowercase
 - IsUpper : data una stringa retituisce se è uppercase
+- RimuoviElemento : dato un indice, rimuove un elemento da una slice
 
 ## MATH
 
@@ -89,8 +90,6 @@
             X, Y int
         }
     ```
-
-- RimuoviElemento : dato un indice, rimuove un elemento da una slice
 
 - Log : funzione per stampa di debug
 
