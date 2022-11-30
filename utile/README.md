@@ -70,11 +70,18 @@
 
 - *StampaGrafoString()* : **METODO** per stampare il grafo
 
-## SLICE
+## STRING
 
 - IsLower : data una stringa retituisce se è lowercase
 - IsUpper : data una stringa retituisce se è uppercase
+
+## SLICE
+
 - RimuoviElemento : dato un indice, rimuove un elemento da una slice
+- AggiungiElementoTesta : aggiunge un elemento in prima posizione della slice
+- AggiungiElementoCoda : aggiunge un elemento in ultima posizione della slice
+- RimuoviElementoTesta : rimuovi un elemento in prima posizione della slice
+- RimuoviElementoCoda : rimuovi un elemento in ultima posizione della slice
 
 ## MATH
 
