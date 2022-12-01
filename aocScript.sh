@@ -14,7 +14,7 @@ curl https://adventofcode.com/$anno/day/$giorno/input -o input.txt -H "cookie: s
 echo 'package main ' > $giorno.go
 echo '' >> $giorno.go
 echo 'import (' >> $giorno.go
-echo '  zairo github.com/zAiro12/AdventOfCode/utile'>> $giorno.go
+echo '  zairo "github.com/zAiro12/AdventOfCode/utile"'>> $giorno.go
 echo ')' >> $giorno.go
 echo '' >> $giorno.go
 echo 'func main(){' >> $giorno.go

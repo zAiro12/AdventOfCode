@@ -27,7 +27,7 @@ func StampaA(a ...any) {
 
 // funzione per stampare risultato della parte B
 func StampaB(a ...any) {
-	fmt.Print("A: ")
+	fmt.Print("B: ")
 	for i := 0; i < len(a); i++ {
 		fmt.Print(a[i], " ")
 	}

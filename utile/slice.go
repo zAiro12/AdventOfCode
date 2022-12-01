@@ -1,5 +1,13 @@
 package utile
 
+// data una slice di qualsiasi tipo aggiunge l'elemento in posizione index
+func AggiungiElemento[T comparable](arr []T, index int, val T) []T {
+	a := arr[:index]
+	a = append(a, val)
+	a = append(a, arr[index:]...)
+	return a
+}
+
 // data una slice di qualsiasi tipo elimina l'elemento in posizione index
 func RimuoviElemento[T comparable](arr []T, index int) []T {
 	a := arr[:index]
@@ -29,4 +37,12 @@ func RimuoviElementoTesta[T comparable](arr []T) []T {
 // rimuovi un elemento in ultima posizione della slice
 func RimuoviElementoCoda[T comparable](arr []T) []T {
 	return arr[:len(arr)-1]
+}
+
+func SommaSlice(arr []int) int {
+	var c int
+	for i := 0; i < len(arr); i++ {
+		c += arr[i]
+	}
+	return c
 }
