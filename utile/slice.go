@@ -39,6 +39,7 @@ func RimuoviElementoCoda[T comparable](arr []T) []T {
 	return arr[:len(arr)-1]
 }
 
+// data una slice di int retituisce la somam degli elementi all'interno
 func SommaSlice(arr []int) int {
 	var c int
 	for i := 0; i < len(arr); i++ {

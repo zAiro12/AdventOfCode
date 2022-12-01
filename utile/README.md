@@ -77,11 +77,13 @@
 
 ## SLICE
 
+- AggiungiElemento : dato un indice, aggiunge un elemento da una slice
 - RimuoviElemento : dato un indice, rimuove un elemento da una slice
 - AggiungiElementoTesta : aggiunge un elemento in prima posizione della slice
 - AggiungiElementoCoda : aggiunge un elemento in ultima posizione della slice
 - RimuoviElementoTesta : rimuovi un elemento in prima posizione della slice
 - RimuoviElementoCoda : rimuovi un elemento in ultima posizione della slice
+- SommaSlice : data una slice di int retituisce la somam degli elementi all'interno
 
 ## MATH
 
