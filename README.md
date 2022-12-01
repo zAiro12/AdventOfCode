@@ -7,6 +7,23 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 
 ## Risultati
 
+### [2022](https://github.com/zAiro12/AdventOfCode/tree/main/2022)
+
+|         | Parte 1 | Parte 2 |
+| :-----: | :-----: | :-----: |
+| [Giorno 1](https://adventofcode.com/2022/day/1)     | ⭐ | ⭐ |
+<!-- 
+| [Giorno 2](https://adventofcode.com/2022/day/2)     | ⭐ | ⭐ |
+| [Giorno 3](https://adventofcode.com/2022/day/3)     | ⭐ | ⭐ |
+| [Giorno 4](https://adventofcode.com/2022/day/4)     | ⭐ | ⭐ | 
+| [Giorno 5](https://adventofcode.com/2022/day/5)     | ⭐ | ⭐ | 
+| [Giorno 6](https://adventofcode.com/2022/day/6)     | ⭐ | ⭐ | 
+| [Giorno 7](https://adventofcode.com/2022/day/7)     | ⭐ | ⭐ | 
+| [Giorno 8](https://adventofcode.com/2022/day/8)     | ⭐ | ⭐ | 
+| [Giorno 9](https://adventofcode.com/2022/day/9)     | ⭐ | ⭐ | 
+| [Giorno 10](https://adventofcode.com/2022/day/10)   | ⭐ | ⭐ | 
+-->
+
 ### [2021](https://github.com/zAiro12/AdventOfCode/tree/main/2021)
 
 |         | Parte 1 | Parte 2 |
