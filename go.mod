@@ -1,3 +1,3 @@
-module github.com/zAiro12/AdventOfCode
+module github.com/zAiro12/utile
 
 go 1.19
