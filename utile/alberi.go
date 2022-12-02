@@ -29,14 +29,14 @@ func GenAlbero(arr []int, i int) (root *NodoAlbero) {
 }
 
 //stampa un albero in preorder
-func StanmpaPreorder(node *NodoAlbero) {
+func StampaPreorder(node *NodoAlbero) {
 	//deepSearch
 	if node == nil {
 		return
 	}
 	fmt.Println(node.Val)
-	StanmpaPreorder(node.Sinistra)
-	StanmpaPreorder(node.Destra)
+	StampaPreorder(node.Sinistra)
+	StampaPreorder(node.Destra)
 
 }
 
