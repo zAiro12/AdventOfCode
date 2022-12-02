@@ -12,8 +12,8 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
 | [Giorno 1](https://adventofcode.com/2022/day/1)     | ⭐ | ⭐ |
-<!-- 
 | [Giorno 2](https://adventofcode.com/2022/day/2)     | ⭐ | ⭐ |
+<!-- 
 | [Giorno 3](https://adventofcode.com/2022/day/3)     | ⭐ | ⭐ |
 | [Giorno 4](https://adventofcode.com/2022/day/4)     | ⭐ | ⭐ | 
 | [Giorno 5](https://adventofcode.com/2022/day/5)     | ⭐ | ⭐ | 
