@@ -30,7 +30,7 @@ func parteA() int {
 		lettere2 := mappaString(secondaParte)
 
 		intruso := trovaIntruso(lettere1, lettere2)
-		counter+= calcolaPunteggio(intruso)
+		counter += calcolaPunteggio(intruso)
 	}
 	return counter
 }

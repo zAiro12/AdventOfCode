@@ -32,6 +32,8 @@ func main() {
 		}
 	}
 	zairo.Log("L:", lunghezza)
+	zairo.Log("in:", len(in))
+	zairo.Log("matrice:", len(matrice))
 	// stampa(matrice, lunghezza)
 	zairo.StampaA(parteA(matrice, 10))
 }
