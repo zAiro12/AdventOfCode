@@ -47,3 +47,13 @@ func SommaSlice(arr []int) int {
 	}
 	return c
 }
+
+// data una slice di qualsiasi tipo, retituisce la slice girata
+func ReverseSlice[T comparable](arr []T) []T {
+	lunghezza := len(arr)
+	for i := 0; i < lunghezza/2; i++ {
+		arr[i], arr[lunghezza-1-i] = arr[lunghezza-1-i], arr[i]
+	}
+
+	return arr
+}

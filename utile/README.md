@@ -84,6 +84,7 @@
 - RimuoviElementoTesta : rimuovi un elemento in prima posizione della slice
 - RimuoviElementoCoda : rimuovi un elemento in ultima posizione della slice
 - SommaSlice : data una slice di int retituisce la somam degli elementi all'interno
+- ReverseSlice : data una slice di qualsiasi tipo, retituisce la slice girata
 
 ## MATH
 
