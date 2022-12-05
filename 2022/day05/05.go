@@ -11,8 +11,8 @@ import (
 
 func main() {
 	var in string
-	stack1 := make([][]string, 10)
-	stack2 := make([][]string, 10)
+	stack1 := make(map[int][]string)
+	stack2 := make(map[int][]string)
 
 	file := zairo.Input(os.Args[1])
 	sc := bufio.NewScanner(file)
@@ -37,10 +37,10 @@ func main() {
 	}
 
 	var risultatoA, risultatoB string
-	for i := 1; i < len(stack1); i++ {
+	for i := 1; i <= len(stack1); i++ {
 		risultatoA += stack1[i][0]
 	}
-    for i := 1; i < len(stack2); i++ {
+    for i := 1; i <= len(stack2); i++ {
 		risultatoB += stack2[i][0]
 	}
 
@@ -49,13 +49,13 @@ func main() {
 	zairo.StampaB(risultatoB)
 }
 
-func parteA(quanti, da, a int, stack [][]string) [][]string {
+func parteA(quanti, da, a int, stack map[int][]string) map[int][]string {
 	var appoggio []string
 
 	appoggio = append(appoggio, stack[da][:quanti]...)
 	stack[da] = stack[da][quanti:]
 
-	appoggio = zairo.Reverse(appoggio)
+	appoggio = zairo.ReverseSlice(appoggio)
 
 	appoggio = append(appoggio, stack[a]...)
 	stack[a] = appoggio
@@ -63,7 +63,7 @@ func parteA(quanti, da, a int, stack [][]string) [][]string {
 	return stack
 }
 
-func parteB(quanti, da, a int, stack [][]string) [][]string {
+func parteB(quanti, da, a int, stack map[int][]string) map[int][]string {
 	var appoggio []string
 
 	appoggio = append(appoggio, stack[da][:quanti]...)
