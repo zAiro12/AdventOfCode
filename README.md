@@ -15,28 +15,28 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 | [Giorno 2](https://adventofcode.com/2022/day/2)     | ⭐ | ⭐ |
 | [Giorno 3](https://adventofcode.com/2022/day/3)     | ⭐ | ⭐ |
 | [Giorno 4](https://adventofcode.com/2022/day/4)     | ⭐ | ⭐ |
+| [Giorno 5](https://adventofcode.com/2022/day/5)     | ⭐ | ⭐ |
 <!-- 
-| [Giorno 5](https://adventofcode.com/2022/day/5)     | ⭐ | ⭐ | 
-| [Giorno 6](https://adventofcode.com/2022/day/6)     | ⭐ | ⭐ | 
-| [Giorno 7](https://adventofcode.com/2022/day/7)     | ⭐ | ⭐ | 
-| [Giorno 8](https://adventofcode.com/2022/day/8)     | ⭐ | ⭐ | 
-| [Giorno 9](https://adventofcode.com/2022/day/9)     | ⭐ | ⭐ | 
-| [Giorno 10](https://adventofcode.com/2022/day/10)   | ⭐ | ⭐ | 
-| [Giorno 11](https://adventofcode.com/2022/day/11)   | ⭐ | ⭐ | 
-| [Giorno 12](https://adventofcode.com/2022/day/12)   | ⭐ | ⭐ | 
-| [Giorno 13](https://adventofcode.com/2022/day/13)   | ⭐ | ⭐ | 
-| [Giorno 14](https://adventofcode.com/2022/day/14)   | ⭐ | ⭐ | 
-| [Giorno 15](https://adventofcode.com/2022/day/15)   | ⭐ | ⭐ | 
-| [Giorno 16](https://adventofcode.com/2022/day/16)   | ⭐ | ⭐ | 
-| [Giorno 17](https://adventofcode.com/2022/day/17)   | ⭐ | ⭐ | 
-| [Giorno 18](https://adventofcode.com/2022/day/18)   | ⭐ | ⭐ | 
-| [Giorno 19](https://adventofcode.com/2022/day/19)   | ⭐ | ⭐ | 
-| [Giorno 20](https://adventofcode.com/2022/day/20)   | ⭐ | ⭐ | 
-| [Giorno 21](https://adventofcode.com/2022/day/21)   | ⭐ | ⭐ | 
-| [Giorno 22](https://adventofcode.com/2022/day/22)   | ⭐ | ⭐ | 
-| [Giorno 23](https://adventofcode.com/2022/day/23)   | ⭐ | ⭐ | 
-| [Giorno 24](https://adventofcode.com/2022/day/24)   | ⭐ | ⭐ | 
-| [Giorno 25](https://adventofcode.com/2022/day/25)   | ⭐ | ⭐ | 
+| [Giorno 6](https://adventofcode.com/2022/day/6)     | ⭐ | ⭐ |
+| [Giorno 7](https://adventofcode.com/2022/day/7)     | ⭐ | ⭐ |
+| [Giorno 8](https://adventofcode.com/2022/day/8)     | ⭐ | ⭐ |
+| [Giorno 9](https://adventofcode.com/2022/day/9)     | ⭐ | ⭐ |
+| [Giorno 10](https://adventofcode.com/2022/day/10)   | ⭐ | ⭐ |
+| [Giorno 11](https://adventofcode.com/2022/day/11)   | ⭐ | ⭐ |
+| [Giorno 12](https://adventofcode.com/2022/day/12)   | ⭐ | ⭐ |
+| [Giorno 13](https://adventofcode.com/2022/day/13)   | ⭐ | ⭐ |
+| [Giorno 14](https://adventofcode.com/2022/day/14)   | ⭐ | ⭐ |
+| [Giorno 15](https://adventofcode.com/2022/day/15)   | ⭐ | ⭐ |
+| [Giorno 16](https://adventofcode.com/2022/day/16)   | ⭐ | ⭐ |
+| [Giorno 17](https://adventofcode.com/2022/day/17)   | ⭐ | ⭐ |
+| [Giorno 18](https://adventofcode.com/2022/day/18)   | ⭐ | ⭐ |
+| [Giorno 19](https://adventofcode.com/2022/day/19)   | ⭐ | ⭐ |
+| [Giorno 20](https://adventofcode.com/2022/day/20)   | ⭐ | ⭐ |
+| [Giorno 21](https://adventofcode.com/2022/day/21)   | ⭐ | ⭐ |
+| [Giorno 22](https://adventofcode.com/2022/day/22)   | ⭐ | ⭐ |
+| [Giorno 23](https://adventofcode.com/2022/day/23)   | ⭐ | ⭐ |
+| [Giorno 24](https://adventofcode.com/2022/day/24)   | ⭐ | ⭐ |
+| [Giorno 25](https://adventofcode.com/2022/day/25)   | ⭐ | ⭐ |
 -->
 
 ### [2021](https://github.com/zAiro12/AdventOfCode/tree/main/2021)
