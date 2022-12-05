@@ -26,7 +26,6 @@ func main() {
 			index := 1
 			for j := 1; j <= nPile; j++ {
 				val := in[(index)]
-				zairo.Log("val", string(val))
 				if unicode.IsLetter(rune(val)) {
 					stack1[j] = append(stack1[j], string(val))
 					stack2[j] = append(stack2[j], string(val))
@@ -37,7 +36,6 @@ func main() {
 		} else if in != "" && in[0] == 'm' {
 			fmt.Sscanf(sc.Text(), "move %d from %d to %d", &quanti, &da, &a)
 
-			zairo.Log(stack1)
 			stack1 = parteA(quanti, da, a, stack1)
 			stack2 = parteB(quanti, da, a, stack2)
 
