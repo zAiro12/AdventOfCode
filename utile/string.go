@@ -13,3 +13,14 @@ func IsUpper(s string) bool {
 	up := strings.ToUpper(s)
 	return up == s
 }
+
+// data uan stringa restituisce se le lettere sono tutte diverse
+func IsDiverse(s string) bool {
+	mappa := make(map[byte]bool)
+	
+	for i := 0; i < len(s); i++ {
+		mappa[s[i]] = true
+	}
+
+	return len(mappa) == len(s)
+}

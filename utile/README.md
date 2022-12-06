@@ -74,6 +74,7 @@
 
 - IsLower : data una stringa retituisce se è lowercase
 - IsUpper : data una stringa retituisce se è uppercase
+- IsDiverse : data uan stringa restituisce se le lettere sono tutte diverse
 
 ## SLICE
 
