@@ -57,3 +57,13 @@ func ReverseSlice[T comparable](arr []T) []T {
 
 	return arr
 }
+
+// cerca un elemento e lo rimuove in tutte le posizioni dalla slice
+func RimuoviVal[T comparable](arr []T, elemento T) []T {
+	for i, v := range arr {
+		if v == elemento {
+			arr = RimuoviElemento(arr, i)
+		}
+	}
+	return arr
+}
