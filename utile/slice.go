@@ -1,5 +1,21 @@
 package utile
 
+type Signed interface {
+	~int | ~int8 | ~int16 | ~int32 | ~int64
+}
+type Unsigned interface {
+	~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr
+}
+type Integer interface {
+	Signed | Unsigned
+}
+type Float interface {
+	~float32 | ~float64
+}
+type Ordered interface {
+	Integer | Float
+}
+
 // data una slice di qualsiasi tipo aggiunge l'elemento in posizione index
 func AggiungiElemento[T comparable](arr []T, index int, val T) []T {
 	a := arr[:index]
@@ -69,8 +85,9 @@ func RimuoviVal[T comparable](arr []T, elemento T) []T {
 }
 
 // data una slice di int retituisce la moltiplicazione degli elementi all'interno
-func MoltipicaSlice(arr []int) int {
-	c := 1
+func MoltipicaSlice[T Ordered](arr []T) T {
+	var c T
+	c = 1
 	for i := 0; i < len(arr); i++ {
 		c *= arr[i]
 	}
