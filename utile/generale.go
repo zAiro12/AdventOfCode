@@ -8,8 +8,8 @@ type Point struct {
 }
 
 // funzione per stampa di debug
-func Log(a ...any) {
-	fmt.Print("DEBUG: ")
+func Log(s string, a ...any) {
+	fmt.Print("DEBUG: ", s, " ")
 	for i := 0; i < len(a); i++ {
 		fmt.Print(a[i], " ")
 	}
