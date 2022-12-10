@@ -55,13 +55,9 @@ func parteA(ciclo, x int) int {
 }
 
 func parteB(ciclo, x int, CRT [6][40]bool) [6][40]bool {
-	if x < 0 {
-		return CRT
-	}
-
-	cursore := (ciclo % 40)
-	riga := ciclo / 40
-	if x == cursore-2 || x == cursore-1 || x == cursore {
+	cursore := (ciclo - 1) % 40
+	riga := (ciclo - 1) / 40
+	if x == cursore-1 || x == cursore || x == cursore+1 {
 		CRT[riga][cursore] = true
 	}
 
