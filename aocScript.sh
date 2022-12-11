@@ -19,4 +19,7 @@ echo ')' >> $giorno.go
 echo '' >> $giorno.go
 echo 'func main(){' >> $giorno.go
 echo '' >> $giorno.go
+echo '' >> $giorno.go
+echo '    zairo.StampaA()' >> $giorno.go
+echo '    zairo.StampaB()' >> $giorno.go
 echo '}' >> $giorno.go
