@@ -105,7 +105,6 @@
     ```
 
 - Log : funzione per stampa di debug
-
+- Logln : funzione per stampa di debug
 - StampaA : funzione per stampare risultato della parte A
-
 - StampaB : funzione per stampare risultato della parte B
