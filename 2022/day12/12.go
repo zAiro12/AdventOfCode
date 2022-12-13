@@ -29,7 +29,7 @@ func main() {
 		y++
 	}
 
-	zairo.StampaMappa(matrice, x, y)
+	zairo.StampaMappa(matrice, y, x)
 	zairo.StampaA()
 	zairo.StampaB()
 }

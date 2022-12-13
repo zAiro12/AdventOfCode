@@ -46,8 +46,8 @@ func StampaB(a ...any) {
 
 // funzione per stampare una mappa con chiave Point e qualsiasi valore come valore
 func StampaMappa[T any](mappa map[Point]T, x, y int) {
-	for i := 0; i < y; i++ {
-		for j := 0; j < x; j++ {
+	for i := 0; i < x; i++ {
+		for j := 0; j < y; j++ {
 			fmt.Print(mappa[Point{i, j}])
 		}
 		fmt.Println()
