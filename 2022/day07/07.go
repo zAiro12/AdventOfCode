@@ -62,9 +62,8 @@ func creaAlbero(cartelle *cartelle) {
 
 				} else if split2[0] == "$" {
 
-					cursore = setCursore(split2[2], cursore)
-					if cursore == nil {
-						cursore = cartelle.root
+					if split2[2] == ".." {
+						cursore = cursore.sopra
 					}
 					break
 
@@ -94,16 +93,12 @@ func aggiungiSottoCartella(s string, cartellaCorrente *cartella) {
 }
 
 func setCursore(s string, cursore *cartella) *cartella {
-	if cursore == nil {
-		return cursore
-	}
-
 	for _, v := range cursore.sottocartelle {
 		if v.nome == s {
 			return v
 		}
 	}
-	return cursore.sopra
+	return cursore
 }
 
 func stampaAlbero(cartella *cartella) {
