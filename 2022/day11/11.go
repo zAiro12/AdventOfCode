@@ -207,10 +207,11 @@ func parteB(scimmie map[string]scimmia) int {
 					}
 				}
 
+				nuovoOggetto = nuovoOggetto % numeroMagico
 				if nuovoOggetto%scimmie[nomeScimmia].test == 0 {
 
 					appoggio := scimmie[scimmie[nomeScimmia].ifTrue].oggetti
-					appoggio = append(appoggio, nuovoOggetto%numeroMagico)
+					appoggio = append(appoggio, nuovoOggetto)
 					scimmie[scimmie[nomeScimmia].ifTrue] = scimmia{
 						oggetti:           appoggio,
 						isMoltiplicazione: scimmie[scimmie[nomeScimmia].ifTrue].isMoltiplicazione,
@@ -222,7 +223,7 @@ func parteB(scimmie map[string]scimmia) int {
 
 				} else {
 					appoggio := scimmie[scimmie[nomeScimmia].ifFalse].oggetti
-					appoggio = append(appoggio, nuovoOggetto%numeroMagico)
+					appoggio = append(appoggio, nuovoOggetto)
 					scimmie[scimmie[nomeScimmia].ifFalse] = scimmia{
 						oggetti:           appoggio,
 						isMoltiplicazione: scimmie[scimmie[nomeScimmia].ifFalse].isMoltiplicazione,
