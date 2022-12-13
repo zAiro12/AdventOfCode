@@ -108,3 +108,4 @@
 - Logln : funzione per stampa di debug
 - StampaA : funzione per stampare risultato della parte A
 - StampaB : funzione per stampare risultato della parte B
+- StampaMappa : funzione per stampare una mappa con chiave Point e qualsiasi valore come valore
