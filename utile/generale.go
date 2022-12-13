@@ -48,7 +48,7 @@ func StampaB(a ...any) {
 func StampaMappa[T any](mappa map[Point]T, x, y int) {
 	for i := 0; i < y; i++ {
 		for j := 0; j < x; j++ {
-			fmt.Print(mappa[Point{i, j}])
+			fmt.Print(mappa[Point{j, i}])
 		}
 		fmt.Println()
 	}
