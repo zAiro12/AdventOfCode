@@ -25,8 +25,9 @@ func main() {
 	var cartelle cartelle
 	creaAlbero(&cartelle)
 
-	stampaAlbero(cartelle.root)
-	zairo.StampaA(parteA())
+	//stampaAlbero(cartelle.root)
+	aggiornavalori(cartelle.root)
+	zairo.StampaA(parteA(cartelle))
 	zairo.StampaB()
 }
 
@@ -47,9 +48,8 @@ func creaAlbero(cartelle *cartelle) {
 		if split[1] == "cd" && split[2] == ".." {
 			cursore = cursore.sopra
 
-		} else if split[1] == "cd" && split[2] != "/" && split[2] != ".." {
+		} else if split[1] == "cd" && split[2] != ".." {
 			cursore = setCursore(split[2], cursore)
-			zairo.Log("FUORI cursore:", cursore)
 		}
 
 		if split[1] == "ls" {
@@ -64,6 +64,8 @@ func creaAlbero(cartelle *cartelle) {
 
 					if split2[2] == ".." {
 						cursore = cursore.sopra
+					} else {
+						cursore = setCursore(split2[2], cursore)
 					}
 					break
 
@@ -83,13 +85,13 @@ func newNode(s string, father *cartella) *cartella {
 
 func creaRoot(s string) *cartella {
 	node := newNode(s, nil)
+	node.sopra = node
 	return node
 }
 
 func aggiungiSottoCartella(s string, cartellaCorrente *cartella) {
 	node := newNode(s, cartellaCorrente)
-	node.sottocartelle = append(node.sottocartelle, node)
-	zairo.Log("figli creati", node, node.sopra)
+	cartellaCorrente.sottocartelle = append(cartellaCorrente.sottocartelle, node)
 }
 
 func setCursore(s string, cursore *cartella) *cartella {
@@ -111,7 +113,32 @@ func stampaAlbero(cartella *cartella) {
 		stampaAlbero(cartella.sottocartelle[i])
 	}
 }
-func parteA() int {
 
-	return 0
+func aggiornavalori(cartella *cartella) {
+	for i := 0; i < len(cartella.sottocartelle); i++ {
+		cartella.dimensione += cartella.sottocartelle[i].dimensione
+		aggiornavalori(cartella.sottocartelle[i])
+	}
+}
+
+func parteA(cartelle cartelle) int {
+	var daVisitare []*cartella
+	var counter int
+
+	daVisitare = append(daVisitare, cartelle.root)
+	var cursore *cartella
+	
+	for len(daVisitare) != 0 {
+		cursore = daVisitare[0]
+		daVisitare = daVisitare[1:]
+
+		if cursore.dimensione < 100000 {
+			counter += cursore.dimensione
+		}
+
+		if len(cursore.sottocartelle) != 0 {
+			daVisitare = append(daVisitare, cursore.sottocartelle...)
+		}
+	}
+	return counter
 }
