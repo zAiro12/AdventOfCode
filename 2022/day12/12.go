@@ -28,14 +28,14 @@ func main() {
 		in = sc.Text()
 
 		for x = 0; x < len(in); x++ {
-			matrice[zairo.Point{X: x, Y: y}] = dato{in[x], math.MaxInt}
+			matrice[zairo.Point{X: x, Y: y}] = dato{in[x], 99}
 		}
 		y++
 	}
 
-	StampaMappa(matrice, x, y)
-	zairo.StampaA(cerca(cercaS(matrice), matrice, zairo.Point{X: -1, Y: -1}, 0))
-	zairo.StampaB()
+	//StampaMappa(matrice, x, y)
+	zairo.StampaA(parteA(cercaS(matrice), matrice))
+	zairo.StampaB(parteB(matrice))
 }
 
 func StampaMappa(mappa map[zairo.Point]dato, x, y int) {
@@ -45,6 +45,15 @@ func StampaMappa(mappa map[zairo.Point]dato, x, y int) {
 		}
 		fmt.Println()
 	}
+}
+func StampaMappaVal(mappa map[zairo.Point]dato, x, y int) {
+	for i := 0; i < y; i++ {
+		for j := 0; j < x; j++ {
+			fmt.Printf("%c %2d ", mappa[zairo.Point{X: j, Y: i}].nome, mappa[zairo.Point{X: j, Y: i}].val)
+		}
+		fmt.Println()
+	}
+	fmt.Println()
 }
 
 func cercaS(matrice map[zairo.Point]dato) zairo.Point {
@@ -56,53 +65,79 @@ func cercaS(matrice map[zairo.Point]dato) zairo.Point {
 	return zairo.Point{}
 }
 
-func cerca(nodo zairo.Point, matrice map[zairo.Point]dato, partenza zairo.Point, counter int) int {
-	zairo.Log("ciclo", counter)
+func parteA(start zairo.Point, matrice map[zairo.Point]dato) int {
+	var frontiera []zairo.Point
+	exl := make(map[zairo.Point]bool)
 
-	if matrice[nodo].nome == 'E' {
-		return counter
+	frontiera = append(frontiera, start)
+
+	var daAnalizzare zairo.Point
+	for len(frontiera) != 0 {
+		daAnalizzare = frontiera[0]
+		frontiera = frontiera[1:]
+
+		if matrice[daAnalizzare].nome == 'S' {
+			matrice[daAnalizzare] = dato{'a', 0}
+		}
+
+		if !exl[daAnalizzare] {
+
+			if matrice[daAnalizzare].nome == 'E' {
+				return matrice[daAnalizzare].val
+			}
+
+			exl[daAnalizzare] = true
+
+			// UP
+			if ((matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}].nome == 'E' && matrice[daAnalizzare].nome == 'z') || (matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}].nome <= matrice[daAnalizzare].nome+1 && matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}].nome != 0 && matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}].nome != 'E')) && !exl[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}] {
+
+				frontiera = append(frontiera, zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1})
+				matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}] = dato{matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y - 1}].nome, matrice[daAnalizzare].val + 1}
+			}
+
+			// DOWN
+			if ((matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}].nome == 'E' && matrice[daAnalizzare].nome == 'z') || (matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}].nome <= matrice[daAnalizzare].nome+1 && matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}].nome != 0 && matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}].nome != 'E')) && !exl[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}] {
+
+				frontiera = append(frontiera, zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1})
+				matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}] = dato{matrice[zairo.Point{X: daAnalizzare.X, Y: daAnalizzare.Y + 1}].nome, matrice[daAnalizzare].val + 1}
+			}
+
+			// LEFT
+			if ((matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}].nome == 'E' && matrice[daAnalizzare].nome == 'z') || (matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}].nome <= matrice[daAnalizzare].nome+1 && matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}].nome != 0 && matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}].nome != 'E')) && !exl[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}] {
+
+				frontiera = append(frontiera, zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y})
+				matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}] = dato{matrice[zairo.Point{X: daAnalizzare.X - 1, Y: daAnalizzare.Y}].nome, matrice[daAnalizzare].val + 1}
+			}
+
+			// RIGHT
+			if ((matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}].nome == 'E' && matrice[daAnalizzare].nome == 'z') || (matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}].nome <= matrice[daAnalizzare].nome+1 && matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}].nome != 0 && matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}].nome != 'E')) && !exl[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}] {
+
+				frontiera = append(frontiera, zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y})
+				matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}] = dato{matrice[zairo.Point{X: daAnalizzare.X + 1, Y: daAnalizzare.Y}].nome, matrice[daAnalizzare].val + 1}
+			}
+
+		}
 	}
-	if matrice[nodo].nome == 'S' {
-		matrice[nodo] = dato{'a', 0}
+
+	return 0
+}
+
+func parteB(matrice map[zairo.Point]dato) int {
+	var min int = math.MaxInt
+	var tmp int
+
+	for k, v := range matrice {
+		for k1, v1 := range matrice {
+			v1 = dato{v1.nome, 0}
+			matrice[k1] = v1
+		}
+		if v.nome == 'a' || v.nome == 'S' {
+			tmp = parteA(k, matrice)
+
+			if tmp < min && tmp != 0 {
+				min = tmp
+			}
+		}
 	}
-
-	zairo.Log("a", counter < matrice[nodo].val)
-	if counter < matrice[nodo].val || matrice[nodo].nome == 'a' {
-		matrice[nodo] = dato{matrice[nodo].nome, counter}
-
-		x := nodo.X
-		y := nodo.Y
-
-		var next zairo.Point
-		//Up
-		next = zairo.Point{X: x, Y: y - 1}
-
-		if matrice[next].val != 0 && matrice[next].nome <= matrice[nodo].nome+1 && matrice[next].nome+matrice[nodo].nome == 'E'+'z' && partenza != next {
-			return cerca(next, matrice, nodo, counter+1)
-		}
-
-		//Down
-		next = zairo.Point{X: x, Y: y + 1}
-
-		if matrice[next].val != 0 && matrice[next].nome <= matrice[nodo].nome+1 && matrice[next].nome+matrice[nodo].nome == 'E'+'z' && partenza != next {
-			return cerca(next, matrice, nodo, counter+1)
-		}
-
-		//Left
-		next = zairo.Point{X: x - 1, Y: y}
-
-		if matrice[next].val != 0 && matrice[next].nome <= matrice[nodo].nome+1 && matrice[next].nome+matrice[nodo].nome == 'E'+'z' && partenza != next {
-			return cerca(next, matrice, nodo, counter+1)
-		}
-
-		//Right
-		next = zairo.Point{X: x + 1, Y: y}
-
-		if matrice[next].val != 0 && matrice[next].nome <= matrice[nodo].nome+1 && matrice[next].nome+matrice[nodo].nome == 'E'+'z' && partenza != next {
-			return cerca(next, matrice, nodo, counter+1)
-		}
-
-	}
-
-	return math.MaxInt
+	return min
 }
