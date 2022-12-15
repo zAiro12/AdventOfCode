@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -25,10 +26,9 @@ func main() {
 	var cartelle cartelle
 	creaAlbero(&cartelle)
 
-	//stampaAlbero(cartelle.root)
 	aggiornavalori(cartelle.root)
 	zairo.StampaA(parteA(cartelle))
-	zairo.StampaB()
+	zairo.StampaB(parteB(cartelle))
 }
 
 func creaAlbero(cartelle *cartelle) {
@@ -116,8 +116,8 @@ func stampaAlbero(cartella *cartella) {
 
 func aggiornavalori(cartella *cartella) {
 	for i := 0; i < len(cartella.sottocartelle); i++ {
-		cartella.dimensione += cartella.sottocartelle[i].dimensione
 		aggiornavalori(cartella.sottocartelle[i])
+		cartella.dimensione += cartella.sottocartelle[i].dimensione
 	}
 }
 
@@ -127,7 +127,7 @@ func parteA(cartelle cartelle) int {
 
 	daVisitare = append(daVisitare, cartelle.root)
 	var cursore *cartella
-	
+
 	for len(daVisitare) != 0 {
 		cursore = daVisitare[0]
 		daVisitare = daVisitare[1:]
@@ -141,4 +141,24 @@ func parteA(cartelle cartelle) int {
 		}
 	}
 	return counter
+}
+
+func parteB(dir cartelle) int {
+
+	libero := 70000000 - dir.root.dimensione
+	daCercare := 30000000 - libero
+
+	var frontiera []*cartella
+	frontiera = append(frontiera, dir.root)
+	min := math.MaxInt
+
+	for len(frontiera) != 0 {
+		if frontiera[0].dimensione > daCercare && frontiera[0].dimensione < min {
+			min = frontiera[0].dimensione
+		} else {
+			frontiera = append(frontiera, frontiera[0].sottocartelle...)
+			frontiera = frontiera[1:]
+		}
+	}
+	return min
 }
