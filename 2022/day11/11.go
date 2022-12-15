@@ -23,7 +23,8 @@ type scimmia struct {
 
 func main() {
 
-	scimmie := make(map[string]scimmia)
+	scimmieA := make(map[string]scimmia)
+	scimmieB := make(map[string]scimmia)
 
 	file := zairo.Input(os.Args[1])
 	sc := bufio.NewScanner(file)
@@ -75,13 +76,14 @@ func main() {
 		in = strings.Trim(in, "    If false: throw to monkey ")
 		ifFalse = in
 
-		scimmie[split[1]] = scimmia{oggetti: oggetti, isMoltiplicazione: isMoltiplicazione, operazione: operazione, test: test, ifTrue: ifTrue, ifFalse: ifFalse, ispezione: 0}
+		scimmieA[split[1]] = scimmia{oggetti: oggetti, isMoltiplicazione: isMoltiplicazione, operazione: operazione, test: test, ifTrue: ifTrue, ifFalse: ifFalse, ispezione: 0}
+		scimmieB[split[1]] = scimmia{oggetti: oggetti, isMoltiplicazione: isMoltiplicazione, operazione: operazione, test: test, ifTrue: ifTrue, ifFalse: ifFalse, ispezione: 0}
 
 		sc.Scan()
 	}
 
-	zairo.StampaA(parteA(scimmie))
-	zairo.StampaB(parteB(scimmie))
+	zairo.StampaA(parteA(scimmieA))
+	zairo.StampaB(parteB(scimmieB))
 }
 
 func aggiungiVal(s string) []int {
@@ -176,13 +178,15 @@ func parteA(scimmie map[string]scimmia) int {
 	}
 
 	sort.Ints(iterazioni)
-	return iterazioni[len(iterazioni)-1] * iterazioni[len(iterazioni)-2]
+	zairo.ReverseSlice(iterazioni)
+	return iterazioni[0] * iterazioni[1]
 }
 
 func parteB(scimmie map[string]scimmia) int {
 	numeroMagico := 1
 	for _, v := range scimmie {
 		numeroMagico *= v.test
+
 	}
 
 	for i := 0; i < 10000; i++ {
@@ -208,6 +212,7 @@ func parteB(scimmie map[string]scimmia) int {
 				}
 
 				nuovoOggetto = nuovoOggetto % numeroMagico
+
 				if nuovoOggetto%scimmie[nomeScimmia].test == 0 {
 
 					appoggio := scimmie[scimmie[nomeScimmia].ifTrue].oggetti
@@ -256,15 +261,14 @@ func parteB(scimmie map[string]scimmia) int {
 		}
 	}
 
-	zairo.Log("scimmie:", scimmie)
-
 	var iterazioni []int
 	for _, v := range scimmie {
 		iterazioni = append(iterazioni, v.ispezione)
 	}
 
 	sort.Ints(iterazioni)
-	return iterazioni[len(iterazioni)-1] * iterazioni[len(iterazioni)-2]
+	zairo.ReverseSlice(iterazioni)
+	return iterazioni[0] * iterazioni[1]
 }
 
 func stampaScimmie(scimmie map[string]scimmia) {
