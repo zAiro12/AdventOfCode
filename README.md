@@ -23,9 +23,9 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 | [Giorno 10](https://adventofcode.com/2022/day/10)   | ⭐ | ⭐ |
 | [Giorno 11](https://adventofcode.com/2022/day/11)   | ⭐ | ⭐ |
 | [Giorno 12](https://adventofcode.com/2022/day/12)   | ⭐ | ⭐ |
-<!-- 
-| [Giorno 13](https://adventofcode.com/2022/day/13)   | ⭐ | ⭐ |
+| [Giorno 13](https://adventofcode.com/2022/day/13)   |  |  |
 | [Giorno 14](https://adventofcode.com/2022/day/14)   | ⭐ | ⭐ |
+<!-- 
 | [Giorno 15](https://adventofcode.com/2022/day/15)   | ⭐ | ⭐ |
 | [Giorno 16](https://adventofcode.com/2022/day/16)   | ⭐ | ⭐ |
 | [Giorno 17](https://adventofcode.com/2022/day/17)   | ⭐ | ⭐ |
