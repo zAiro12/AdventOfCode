@@ -93,6 +93,7 @@
 
 - Max : dati due numeri, restituisce il massimo
 - Min : dati due numeri, restituisce il minimo
+- ABS : dato un numero restituisce il suo valore assoluto
 
 ## RESTO
 
