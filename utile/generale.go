@@ -32,7 +32,8 @@ func StampaA(a ...any) {
 	for i := 0; i < len(a); i++ {
 		fmt.Print(a[i], " ")
 	}
-	fmt.Println("Vaffanculo Luca, sei una testa di culo")
+	//"Vaffanculo Luca, sei una testa di culo"
+	fmt.Println()
 }
 
 // funzione per stampare risultato della parte B
