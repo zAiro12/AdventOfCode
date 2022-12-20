@@ -1,0 +1,170 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+
+	//Alit "github.com/Alit54/General/gofunc"
+	zairo "github.com/zAiro12/AdventOfCode/utile"
+)
+
+type Packet struct {
+	num  map[int]int
+	list map[int]Packet
+}
+
+func main() {
+	fmt.Println(Day13())
+}
+
+func Day13() (int, int) {
+	return Part13A(), Part13B()
+}
+
+func Part13A() int {
+	index, sum := 0, 0
+	file := zairo.Input(os.Args[1])
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		// We need to read 3 rows at a time (2 functional + 1 empty row)
+		//scanner.Scan()
+		row1 := scanner.Text()
+		scanner.Scan()
+		row2 := scanner.Text()
+		scanner.Scan()
+		// Create Input
+		packet1 := createPacket(row1)
+		packet2 := createPacket(row2)
+
+		zairo.Logln("pacchetti", packet1, packet2)
+		// Check who is less
+		index++
+		if compare(packet1, packet2) < 0 {
+			sum += index
+		}
+	}
+	return sum
+}
+
+func Part13B() int {
+	file := zairo.Input(os.Args[1])
+	scanner := bufio.NewScanner(file)
+	divider1 := createPacket("[[2]]")
+	divider2 := createPacket("[[6]]")
+	pos1, pos2 := 1, 2
+	for scanner.Scan() {
+		if scanner.Text() == "" {
+			continue
+		}
+		packet := createPacket(scanner.Text())
+		if compare(packet, divider1) < 0 {
+			pos1++
+			pos2++
+			continue
+		}
+		if compare(packet, divider2) < 0 {
+			pos2++
+			continue
+		}
+	}
+	return pos1 * pos2
+}
+
+// Converts a string into the right Packet input
+func createPacket(input string) Packet {
+	var p Packet
+	num := make(map[int]int)
+	list := make(map[int]Packet)
+	p.list = list
+	p.num = num
+	var index, counter int
+	for i := 1; i < len(input)-1; i++ {
+		// Search for Packets
+		if input[i] == '[' {
+			counter++
+			for j := i; j < len(input); j++ {
+				if input[j] == ']' {
+					counter--
+					if counter == 0 {
+						p.list[index] = createPacket(input[i : j+1])
+						index++
+					}
+					i = j + 1
+					break
+				}
+			}
+		} else {
+			// Search for numbers
+			for j := i; j < len(input); j++ {
+				if input[j] == ',' || j == len(input)-1 {
+					n, err := strconv.Atoi(input[i:j])
+					if err == nil {
+						if n == 0 {
+							n = -1
+						}
+						p.num[index] = n
+						index++
+					}
+					i = j
+					break
+				}
+			}
+		}
+	}
+	return p
+}
+
+// Returns -1 if packet1<packet2, 0 if they are equal and +1 if packet1>packet2.
+func compare(packet1, packet2 Packet) int {
+	var tmp int
+	// Base Cases
+	if packet1.isEmpty() && packet2.isEmpty() {
+		return 0
+	}
+	if packet1.isEmpty() {
+		return -1
+	}
+	if packet2.isEmpty() {
+		return 1
+	}
+	// Other cases
+	len := zairo.Max(len(packet1.num)+len(packet1.list), len(packet2.num)+len(packet2.list))
+	for i := 0; i < len; i++ {
+		// Compare between numbers
+		if packet1.num[i] != 0 && packet2.num[i] != 0 {
+			if packet1.num[i] < packet2.num[i] {
+				return -1
+			}
+			if packet1.num[i] > packet2.num[i] {
+				return 1
+			}
+			continue
+		}
+		// Compare Between Number and List
+		if packet1.num[i] != 0 {
+			return compare(converti(packet1.num[i]), packet2.list[i])
+		}
+		if packet2.num[i] != 0 {
+			return compare(packet1.list[i], converti(packet2.num[i]))
+		}
+		// Compare between lists
+		tmp = compare(packet1.list[i], packet2.list[i])
+		if tmp != 0 {
+			return tmp
+		}
+		continue
+	}
+	return 0
+}
+
+// Returns if a Packet has no elements.
+func (p Packet) isEmpty() bool {
+	return len(p.list)+len(p.num) == 0
+}
+
+// Returns a Packet made using a number
+func converti(num int) Packet {
+	return createPacket("[" + strconv.Itoa(num) + "]")
+}
