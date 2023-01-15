@@ -139,7 +139,7 @@ func (insieme *dato) parteB() int {
 		distanza = calcolaDistanza(sensor, beacon)
 
 		// insieme.creaMacchia(sensor, distanza)
-		
+		_ = distanza
 	}
 
 	for y := insieme.minY; y <= insieme.maxY; y++ {
