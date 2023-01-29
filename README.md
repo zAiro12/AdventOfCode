@@ -83,4 +83,6 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go.
 | [Giorno 14](https://adventofcode.com/2015/day/14)   | ⭐ | ⭐ |
 | [Giorno 15](https://adventofcode.com/2015/day/15)   | ⭐ | ⭐ |
 | [Giorno 16](https://adventofcode.com/2015/day/16)   | ⭐ | ⭐ |
+| [Giorno 17](https://adventofcode.com/2015/day/17)   |  |  |
+| [Giorno 18](https://adventofcode.com/2015/day/18)   | ⭐ | ⭐ |
 | [Giorno 20](https://adventofcode.com/2015/day/20)   | ⭐ | ⭐ |
