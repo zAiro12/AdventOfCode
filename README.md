@@ -84,6 +84,7 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go. This repository is 
 | [Giorno 4](https://adventofcode.com/2015/day/4)     | ⭐ | ⭐ |
 | [Giorno 5](https://adventofcode.com/2015/day/5)     | ⭐ | ⭐ |
 | [Giorno 6](https://adventofcode.com/2015/day/6)     | ⭐ | ⭐ |
+| [Giorno 7](https://adventofcode.com/2015/day/7)     |  |  |
 | [Giorno 14](https://adventofcode.com/2015/day/14)   | ⭐ | ⭐ |
 | [Giorno 15](https://adventofcode.com/2015/day/15)   | ⭐ | ⭐ |
 | [Giorno 16](https://adventofcode.com/2015/day/16)   | ⭐ | ⭐ |
