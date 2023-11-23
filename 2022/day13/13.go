@@ -8,137 +8,103 @@ import (
 	zairo "github.com/zAiro12/AdventOfCode/utile"
 )
 
-type pacchetto struct {
-	numeri map[int]int
-	lista  map[int]pacchetto
-}
-
 func main() {
-
 	sc := bufio.NewScanner(zairo.Input(os.Args[1]))
 
-	var in string
-	var counterA, index int
+	var lettura1, lettura2 string
+	var index int
 	for sc.Scan() {
-		in = sc.Text()
-		pacchetto1 := riempiRiga(in)
-
-		sc.Scan()
-		in = sc.Text()
-		pacchetto2 := riempiRiga(in)
-
-		sc.Scan()
 		index++
+		lettura1 = sc.Text()
+		sc.Scan()
+		lettura2 = sc.Text()
 
-		//zairo.Logln("pachhetti", pacchetto1, "\n", pacchetto2)
-		if parteA(pacchetto1, pacchetto2) < 0 {
-			counterA += index
-		} else {
-			zairo.Logln("index", index)
-		}
+		lettura1 = lettura1[1 : len(lettura1)-1]
+		lettura2 = lettura2[1 : len(lettura2)-1]
 
+		res, err := parteA(lettura1, lettura2)
+		zairo.Log("index", index, res, err)
+
+		sc.Scan()
 	}
 
-	zairo.StampaA(counterA)
+	zairo.StampaA()
 	zairo.StampaB()
 }
 
-func riempiRiga(s string) pacchetto {
-	p := pacchetto{make(map[int]int), make(map[int]pacchetto)}
+func parteA(str1, str2 string) (bool, int) {
+	len1 := len(str1)
+	len2 := len(str2)
 
-	var index, contaQuadre int
-	for i := 1; i < len(s)-1; i++ {
-		if s[i] == '[' {
-			contaQuadre++
+	if len1 == 0 && len2 != 0 {
+		return true, 0
+	}
 
-			for j := i; j < len(s); j++ {
+	if len2 == 0 && len1 != 0 {
+		return false, 0
+	}
 
-				if s[j] == ']' {
-					contaQuadre--
+	var i1, i2 int
+	var ris string
+	for i1 < len1 && i2 < len2 {
+		ris = comparaElemento(str1[i1], str2[i2], str1, str2)
 
-					if contaQuadre == 0 {
-						p.lista[index] = riempiRiga(s[i : j+1])
-						index++
-					}
+		switch ris {
+		case "=":
+			i1 += 2
+			i2 += 2
+			break
 
-					i = j + 1
-					break
-				}
-			}
+		case "<":
+			return true, 0
 
-		} else {
-			for j := i; j < len(s); j++ {
-				if s[j] == ',' || j == len(s)-1 {
-					n, err := strconv.Atoi(s[i:j])
+		case ">":
+			return true, 0
 
-					if err == nil {
-						if n == 0 {
-							n = -1
-						}
-						p.numeri[index] = n
-						index++
-					}
-					i = j
-					break
-				}
-			}
+		case "1[":
+			zairo.Log("1[")
+		case "2[":
+			zairo.Log("2[")
 
+		default:
+			zairo.Log("switch", ris, string(str1[i1]), string(str2[i2]))
 		}
 	}
-	return p
+
+	return false, 1
 }
 
-func parteA(pacchetto1, pacchetto2 pacchetto) int {
-	var tmp int
-	if pacchetto1.isEmpty() && pacchetto2.isEmpty() {
-		return 0
+func isNum(s byte) bool {
+	_, err := strconv.Atoi(string(s))
+
+	if err != nil {
+		return false
 	}
-	if pacchetto1.isEmpty() {
-		return -1
-	}
-	if pacchetto2.isEmpty() {
-		return 1
-	}
-
-	lunghezza := zairo.Max(len(pacchetto1.lista)+len(pacchetto1.numeri), len(pacchetto2.lista)+len(pacchetto2.numeri))
-
-	for i := 0; i < lunghezza; i++ {
-
-		zairo.Log("condizioni", pacchetto1, pacchetto2, pacchetto1.numeri[i] != 0, pacchetto2.numeri[i] != 0)
-		if pacchetto1.numeri[i] != 0 && pacchetto2.numeri[i] != 0 {
-			if pacchetto1.numeri[i] < pacchetto2.numeri[i] {
-				return -1
-			}
-			if pacchetto1.numeri[i] > pacchetto2.numeri[i] {
-				return 1
-			}
-			continue
-		}
-
-		if pacchetto1.numeri[i] != 0 {
-			return parteA(convert(pacchetto1.numeri[i]), pacchetto2.lista[i])
-		}
-		if pacchetto2.numeri[i] != 0 {
-			return parteA(pacchetto1.lista[i], convert(pacchetto2.numeri[i]))
-		}
-
-		tmp = parteA(pacchetto1.lista[i], pacchetto2.lista[i])
-
-		if tmp != 0 {
-			return tmp
-		}
-
-		continue
-	}
-
-	return 0
+	return true
 }
 
-func (p pacchetto) isEmpty() bool {
-	return len(p.lista)+len(p.numeri) == 0
-}
+func comparaElemento(el1, el2 byte, str1, str2 string) string {
+	if isNum(el1) && isNum(el2) {
+		num1, _ := strconv.Atoi(string(el1))
+		num2, _ := strconv.Atoi(string(el2))
 
-// Returns a Packet made using a number
-func convert(num int) pacchetto {
-	return riempiRiga("[" + strconv.Itoa(num) + "]")
+		if num1 < num2 {
+			return "<"
+		}
+
+		if num2 < num1 {
+			return ">"
+		}
+
+		return "="
+
+	}
+	if el1 == '[' && el2 == '['{
+
+
+		parteA(str1, str2)
+		return "["
+	}
+
+	return "err"
 }
