@@ -11,7 +11,7 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go and Python. This rep
 
 ## Risultati
 
-### [2023](https://github.com/zAiro12/AdventOfCode/tree/main/2023) (0⭐)
+### [2023](https://github.com/zAiro12/AdventOfCode/tree/main/2023) (2⭐)
 
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
