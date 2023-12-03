@@ -11,14 +11,14 @@ I make [**Advent of Code**](http://adventofcode.com/) in Go and Python. This rep
 
 ## Risultati
 
-### [2023](https://github.com/zAiro12/AdventOfCode/tree/main/2023) (2⭐)
+### [2023](https://github.com/zAiro12/AdventOfCode/tree/main/2023) (6⭐)
 
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
 | [Giorno 1](https://adventofcode.com/2023/day/1)     | ⭐ | ⭐ |
 | [Giorno 2](https://adventofcode.com/2023/day/2)     | ⭐ | ⭐ |
-<!-- 
 | [Giorno 3](https://adventofcode.com/2023/day/3)     | ⭐ | ⭐ |
+<!-- 
 | [Giorno 4](https://adventofcode.com/2023/day/4)     | ⭐ | ⭐ |
 | [Giorno 5](https://adventofcode.com/2023/day/5)     | ⭐ | ⭐ |
 | [Giorno 6](https://adventofcode.com/2023/day/6)     | ⭐ | ⭐ |
