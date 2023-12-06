@@ -4,7 +4,7 @@ using System.Text.Json;
 int totalScartchcard = 0;
 Dictionary<string, int> istance = new Dictionary<string, int>();
 StreamReader sr = new StreamReader("input.txt");
-String line = sr.ReadLine();
+String? line = sr.ReadLine();
 
 int cardId = 1;
 while (line != null){
