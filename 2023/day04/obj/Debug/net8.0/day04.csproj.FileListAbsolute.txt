@@ -1,0 +1,15 @@
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/bin/Debug/net8.0/day04
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/bin/Debug/net8.0/day04.deps.json
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/bin/Debug/net8.0/day04.runtimeconfig.json
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/bin/Debug/net8.0/day04.dll
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/bin/Debug/net8.0/day04.pdb
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.AssemblyInfoInputs.cache
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.AssemblyInfo.cs
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.csproj.CoreCompileInputs.cache
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.sourcelink.json
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.dll
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/refint/day04.dll
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.pdb
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/day04.genruntimeconfig.cache
+/Users/zairo/Library/Mobile Documents/com~apple~CloudDocs/AdventOfCode/AdventOfCode/2023/day04/obj/Debug/net8.0/ref/day04.dll
