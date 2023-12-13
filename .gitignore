@@ -5,3 +5,7 @@ simo.txt
 out.txt
 .old
 superprova.txt 
+bin
+obj
+.vscode
+.sln
