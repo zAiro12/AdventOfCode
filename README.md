@@ -7,7 +7,7 @@
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
        width="80" height="15" alt="WTFPL" /></a>
 
-I make [**Advent of Code**](http://adventofcode.com/) in Go and Python. This repository is cover by [WTFPL](http://www.wtfpl.net/about/) Licence. Read below for more information
+I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [Python](https://www.python.org) and [C#](https://learn.microsoft.com/it-it/dotnet/csharp/). This repository is cover by [WTFPL](http://www.wtfpl.net/about/) Licence. Read below for more information
 
 ## Risultati
 

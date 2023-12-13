@@ -8,5 +8,7 @@ superprova.txt
 bin
 obj
 .vscode
-.sln
+*.sln
 *.csproj
+*.json
+*.mod
