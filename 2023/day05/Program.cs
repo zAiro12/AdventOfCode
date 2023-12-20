@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿#pragma warning disable CS8602
+using System.Text.Json;
 
 public class Program{
 
@@ -14,7 +15,7 @@ public class Program{
     }
 
     public static long A(){
-        StreamReader sr = new StreamReader("input.txt");
+        StreamReader sr = new("input.txt");
 
         string? line = sr.ReadLine();
 

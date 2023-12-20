@@ -1,4 +1,8 @@
-﻿using System.Text.RegularExpressions;
+﻿#pragma warning disable CS8600
+#pragma warning disable CS8601
+#pragma warning disable CS8602
+#pragma warning disable CS8604
+using System.Text.RegularExpressions;
 
 internal class Program
 {
