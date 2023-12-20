@@ -23,8 +23,8 @@ I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [
 | [Giorno 6](https://adventofcode.com/2023/day/6)     | ⭐ | ⭐ |
 | [Giorno 7](https://adventofcode.com/2023/day/7)     | ⭐ | ⭐ |
 | [Giorno 8](https://adventofcode.com/2023/day/8)     | ⭐ |  |
-<!-- 
 | [Giorno 9](https://adventofcode.com/2023/day/9)     | ⭐ | ⭐ |
+<!-- 
 | [Giorno 10](https://adventofcode.com/2023/day/10)   | ⭐ | ⭐ |
 | [Giorno 11](https://adventofcode.com/2023/day/11)   | ⭐ | ⭐ |
 | [Giorno 12](https://adventofcode.com/2023/day/12)   | ⭐ | ⭐ |
