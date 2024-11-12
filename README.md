@@ -10,6 +10,37 @@
 I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [Python](https://www.python.org) and [C#](https://learn.microsoft.com/it-it/dotnet/csharp/). This repository is cover by [WTFPL](http://www.wtfpl.net/about/) Licence. Read below for more information
 
 ## Risultati
+### [2024](https://github.com/zAiro12/AdventOfCode/tree/main/2024) (0⭐)
+
+|         | Parte 1 | Parte 2 |
+| :-----: | :-----: | :-----: |
+<!-- 
+| [Giorno 1](https://adventofcode.com/2024/day/1)     | ⭐ | ⭐ |
+| [Giorno 2](https://adventofcode.com/2024/day/2)     | ⭐ | ⭐ |
+| [Giorno 3](https://adventofcode.com/2024/day/3)     | ⭐ | ⭐ |
+| [Giorno 4](https://adventofcode.com/2024/day/4)     | ⭐ | ⭐ |
+| [Giorno 5](https://adventofcode.com/2024/day/5)     | ⭐ | ⭐ |
+| [Giorno 6](https://adventofcode.com/2024/day/6)     | ⭐ | ⭐ |
+| [Giorno 7](https://adventofcode.com/2024/day/7)     | ⭐ | ⭐ |
+| [Giorno 8](https://adventofcode.com/2024/day/8)     | ⭐ | ⭐ |
+| [Giorno 9](https://adventofcode.com/2024/day/9)     | ⭐ | ⭐ |
+| [Giorno 10](https://adventofcode.com/2024/day/10)   | ⭐ | ⭐ |
+| [Giorno 11](https://adventofcode.com/2024/day/11)   | ⭐ | ⭐ |
+| [Giorno 12](https://adventofcode.com/2024/day/12)   | ⭐ | ⭐ |
+| [Giorno 13](https://adventofcode.com/2024/day/13)   | ⭐ | ⭐ |
+| [Giorno 14](https://adventofcode.com/2024/day/14)   | ⭐ | ⭐ |
+| [Giorno 15](https://adventofcode.com/2024/day/15)   | ⭐ | ⭐ |
+| [Giorno 16](https://adventofcode.com/2024/day/16)   | ⭐ | ⭐ |
+| [Giorno 17](https://adventofcode.com/2024/day/17)   | ⭐ | ⭐ |
+| [Giorno 18](https://adventofcode.com/2024/day/18)   | ⭐ | ⭐ |
+| [Giorno 19](https://adventofcode.com/2024/day/19)   | ⭐ | ⭐ |
+| [Giorno 20](https://adventofcode.com/2024/day/20)   | ⭐ | ⭐ |
+| [Giorno 21](https://adventofcode.com/2024/day/21)   | ⭐ | ⭐ |
+| [Giorno 22](https://adventofcode.com/2024/day/22)   | ⭐ | ⭐ |
+| [Giorno 23](https://adventofcode.com/2024/day/23)   | ⭐ | ⭐ |
+| [Giorno 24](https://adventofcode.com/2024/day/24)   | ⭐ | ⭐ |
+| [Giorno 25](https://adventofcode.com/2024/day/25)   | ⭐ | ⭐ |
+-->
 
 ### [2023](https://github.com/zAiro12/AdventOfCode/tree/main/2023) (14⭐)
 
