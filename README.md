@@ -10,12 +10,12 @@
 I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [Python](https://www.python.org) and [C#](https://learn.microsoft.com/it-it/dotnet/csharp/). This repository is cover by [WTFPL](http://www.wtfpl.net/about/) Licence. Read below for more information
 
 ## Risultati
-### [2024](https://github.com/zAiro12/AdventOfCode/tree/main/2024) (0⭐)
+### [2024](https://github.com/zAiro12/AdventOfCode/tree/main/2024) (2⭐)
 
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
-<!-- 
 | [Giorno 1](https://adventofcode.com/2024/day/1)     | ⭐ | ⭐ |
+<!-- 
 | [Giorno 2](https://adventofcode.com/2024/day/2)     | ⭐ | ⭐ |
 | [Giorno 3](https://adventofcode.com/2024/day/3)     | ⭐ | ⭐ |
 | [Giorno 4](https://adventofcode.com/2024/day/4)     | ⭐ | ⭐ |
