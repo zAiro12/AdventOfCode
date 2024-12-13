@@ -1,16 +1,16 @@
 # Advent of Code
-<p align="center">
+<!-- <p align="center">
     <img src="https://user-images.githubusercontent.com/16360374/49324718-7954f100-f4e8-11e8-8ef6-1b701afc504f.png" width="225" alt=""/>
-</p>  
+</p>   -->
+![Albero advent](https://user-images.githubusercontent.com/16360374/49324718-7954f100-f4e8-11e8-8ef6-1b701afc504f.png)
 
-<a href="http://www.wtfpl.net/"><img
-       src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
-       width="80" height="15" alt="WTFPL" /></a>
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png)](http://www.wtfpl.net/)
 
 I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [Python](https://www.python.org) and [C#](https://learn.microsoft.com/it-it/dotnet/csharp/). This repository is cover by [WTFPL](http://www.wtfpl.net/about/) Licence. Read below for more information
 
 ## Risultati
-### [2024](https://github.com/zAiro12/AdventOfCode/tree/main/2024) (16⭐)
+
+### [2024](https://github.com/zAiro12/AdventOfCode/tree/main/2024) (17⭐)
 
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
@@ -22,8 +22,8 @@ I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [
 | [Giorno 6](https://adventofcode.com/2024/day/6)     | ⭐ | ⭐ |
 | [Giorno 7](https://adventofcode.com/2024/day/7)     | ⭐ | ⭐ |
 | [Giorno 8](https://adventofcode.com/2024/day/8)     | ⭐ | ⭐ |
+| [Giorno 9](https://adventofcode.com/2024/day/9)     | ⭐ |  |
 <!-- 
-| [Giorno 9](https://adventofcode.com/2024/day/9)     | ⭐ | ⭐ |
 | [Giorno 10](https://adventofcode.com/2024/day/10)   | ⭐ | ⭐ |
 | [Giorno 11](https://adventofcode.com/2024/day/11)   | ⭐ | ⭐ |
 | [Giorno 12](https://adventofcode.com/2024/day/12)   | ⭐ | ⭐ |
