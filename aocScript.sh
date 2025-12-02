@@ -7,10 +7,12 @@ mkdir day$giorno
 cd day$giorno
 
 touch prova.txt
-echo "file = open('input.txt')" > a.py
-echo "# file = open('prova.txt')" >> a.py
-echo "file = open('input.txt')" > b.py
-echo "# file = open('prova.txt')" >> b.py
+echo "# file = open('input.txt')" > a.py
+echo "file = open('prova.txt')" >> a.py
+echo "# file = open('$anno/$giorno/prova.txt')" >> a.py
+echo "# file = open('input.txt')" > b.py
+echo "file = open('prova.txt')" >> b.py
+echo "# file = open('$anno/$giorno/prova.txt')" >> b.py
 
 giorno=$(date +'%e' | xargs)
 echo $giorno $anno
