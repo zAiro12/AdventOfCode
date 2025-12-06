@@ -10,7 +10,7 @@ I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [
 
 ## Risultati
 
-### [2025](https://github.com/zAiro12/AdventOfCode/tree/main/2025) (8⭐)
+### [2025](https://github.com/zAiro12/AdventOfCode/tree/main/2025) (10⭐)
 
 |         | Parte 1 | Parte 2 |
 | :-----: | :-----: | :-----: |
@@ -18,8 +18,8 @@ I make [**Advent of Code**](http://adventofcode.com/) in [Go](https://go.dev), [
 | [Giorno 2](https://adventofcode.com/2025/day/2)     | ⭐ | ⭐ |
 | [Giorno 3](https://adventofcode.com/2025/day/3)     | ⭐ | ⭐ |
 | [Giorno 4](https://adventofcode.com/2025/day/4)     | ⭐ | ⭐ |
-<!-- 
 | [Giorno 5](https://adventofcode.com/2025/day/5)     | ⭐ | ⭐ |
+<!-- 
 | [Giorno 6](https://adventofcode.com/2025/day/6)     | ⭐ | ⭐ |
 | [Giorno 7](https://adventofcode.com/2025/day/7)     | ⭐ | ⭐ |
 | [Giorno 8](https://adventofcode.com/2025/day/8)     | ⭐ | ⭐ |
